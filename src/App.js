@@ -1,21 +1,57 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Router, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-class App extends Component {
+import LandingPage from './landing-page';
+import LeaderboardPage from './leaderboard-page';
+import MyPicksPage from './my-picks-page';
+
+import { refreshAuthToken } from '../actions/login';
+
+export class App extends Component {
+  componentDidMount() {
+    if (this.props.hasAuthToken) {
+      this.props.dispatch(refreshAuthToken());
+    }
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loggedIn && !this.props.loggedIn) {
+      this.startPeriodicRefresh();
+    } else if (!nextProps.loggedIn && this.props.loggedIn) {
+      this.stopPeriodicRefresh();
+    }
+  }
+  componentWillUnmount() {
+    this.stopPeriodicRefresh();
+  }
+  startPeriodicRefresh() {
+    this.refreshInterval = setInterval(
+      () => this.props.dispatch(refreshAuthToken()),
+      60 * 60 * 1000 //one hour
+    );
+  }
+  stopPeriodicRefresh() {
+    if (!this.refreshInterval) {
+      return;
+    }
+    clearInterval(this.refreshInterval);
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <main>
+          <Route exact path='/' component={LandingPage} />
+          <Route exact path='/leaderboard' component={LeaderboardPage} />
+          <Route exact path='/picks' component={MyPicksPage} />
+        </main>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  hasAuthToken: state.auth.authToken !== null,
+  loggedIn: state.auth.currentUser !== null
+});
+
+export default withRouter(connect(mapStateToProps)(App));
