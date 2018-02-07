@@ -19,6 +19,16 @@ export const setCurrentUser = currentUser => ({
   currentUser
 });
 
+export const TOGGLE_LOGIN_FORM = 'TOGGLE_LOGIN_FORM';
+export const toggleLoginForm = () => ({
+  type: TOGGLE_LOGIN_FORM
+});
+
+export const TOGGLE_SIGNUP_FORM = 'TOGGLE_SIGNUP_FORM';
+export const toggleSignupForm = () => ({
+  type: TOGGLE_SIGNUP_FORM
+});
+
 const base64EncodingUTF8 = str => {
   const encoded = new TextEncoder('utf-8').encode(str);
   const b64Encoded = fromByteArray(encoded);
