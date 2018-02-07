@@ -35,7 +35,7 @@ const storeAuthInfo = (authToken, dispatch) => {
 export const login = (username, password) => dispatch => {
   const token = base64EncodingUTF8(`${username}:${password}`);
   return (
-    fetch(`${API_BASE_URL}/auth/login`, {
+    fetch(`${API_BASE_URL}/login`, {
       method: 'POST',
       headers: {
         Authorization: `Basic ${token}`
@@ -59,7 +59,7 @@ export const login = (username, password) => dispatch => {
 
 export const refreshAuthToken = () => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  return fetch(`${API_BASE_URL}/auth/refresh`, {
+  return fetch(`${API_BASE_URL}/refresh`, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${authToken}`
