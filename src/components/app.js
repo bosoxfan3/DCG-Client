@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import LandingPage from './landing-page';
@@ -8,7 +8,7 @@ import MyPicksPage from './my-picks-page';
 
 import { refreshAuthToken } from '../actions/login';
 
-export class App extends Component {
+export class App extends React.Component {
   componentDidMount() {
     if (this.props.hasAuthToken) {
       this.props.dispatch(refreshAuthToken());

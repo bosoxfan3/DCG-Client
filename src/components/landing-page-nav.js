@@ -5,9 +5,15 @@ import { toggleLoginForm, toggleSignupForm } from '../actions/login';
 
 export class LandingPageNav extends React.Component {
   toggleLoginForm() {
+    if (this.props.showSignupForm) {
+      this.props.dispatch(toggleSignupForm());
+    }
     this.props.dispatch(toggleLoginForm());
   }
   toggleSignupForm() {
+    if (this.props.showLoginForm) {
+      this.props.dispatch(toggleLoginForm());
+    }
     this.props.dispatch(toggleSignupForm());
   }
   render() {
@@ -23,4 +29,9 @@ export class LandingPageNav extends React.Component {
   }
 }
 
-export default connect()(LandingPageNav);
+const mapStateToProps = state => ({
+  showSignupForm: state.auth.showSignupForm,
+  showLoginForm: state.auth.showLoginForm
+});
+
+export default connect(mapStateToProps)(LandingPageNav);
