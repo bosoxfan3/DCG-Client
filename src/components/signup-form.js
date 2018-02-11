@@ -22,11 +22,12 @@ export class SignupForm extends React.Component {
             this.onSubmit(values)
           )}>
           <h2>Sign Up</h2>
-          <label htmlFor="name">Name/Nickname</label>
+          <label htmlFor="name">Entry Name</label>
           <Field 
             component={Input} 
             type="text" 
             name="name" 
+            placeholder="NiNErZ 4eVeR"
             validate={[required, nonEmpty, length({max: 40})]}
           />
           <label htmlFor="username">Username</label>
