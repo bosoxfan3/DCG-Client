@@ -1,16 +1,36 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import UserNav from './user-nav';
-import MyPicksForm from './my-picks-form';
+import { Redirect } from 'react-router-dom';
 
-export function MyPicksPage() {
-  return (
-    <div>
-      <UserNav />
-      <h1>My Picks Page</h1>
-      <MyPicksForm />
-    </div>
-  );
+import UserNav from './user-nav';
+// import MyPicksForm from './my-picks-form';
+
+import { fetchMatchupData } from '../actions/matchups';
+
+export class MyPicksPage extends React.Component {
+  componentDidMount() {
+    if (!this.props.loggedIn) {
+      return;
+    }
+    this.props.dispatch(fetchMatchupData());
+  }
+  render() {
+    if (!this.props.loggedIn) {
+      return <Redirect to="/" />;
+    }
+    return (
+      <div>
+        <UserNav />
+        <h1>My Picks Page</h1>
+        {/* <MyPicksForm /> */}
+      </div>
+    );
+  }
 }
 
-export default connect()(MyPicksPage);
+const mapStateToProps = state => ({
+  loggedIn: state.auth.currentUser !== null,
+  matchupData: state.matchups.matchups
+});
+
+export default connect(mapStateToProps)(MyPicksPage);
