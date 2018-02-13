@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Select extends React.Compoennt {
+export default class Select extends React.Component {
   render() {
     const options = this.props.options.map((option) => (
       <option key={option} value={option}>{option}</option>
