@@ -5,11 +5,17 @@ import {
   TOGGLE_SIGNUP_FORM 
 } from '../actions/login';
 
+import {
+  MAKE_PICKS_SUCCESS,
+  MAKE_PICKS_ERROR
+} from '../actions/picks';
+
 const initialState = {
   authToken: null,
   currentUser: null,
   showLoginForm: false,
-  showSignupForm: false
+  showSignupForm: false,
+  error: null
 };
 
 export default function reducer(state = initialState, action) {
@@ -31,6 +37,18 @@ export default function reducer(state = initialState, action) {
   else if (action.type === TOGGLE_SIGNUP_FORM) {
     return Object.assign({}, state, {
       showSignupForm: !state.showSignupForm
+    });
+  }
+  else if (action.type === MAKE_PICKS_SUCCESS) {
+    alert((action.data));
+    return Object.assign({}, state, {
+      currentUser: action.data,
+      error: null
+    });
+  }
+  else if (action.type === MAKE_PICKS_ERROR) {
+    return Object.assign({}, state, {
+      error: action.error
     });
   }
   return state;

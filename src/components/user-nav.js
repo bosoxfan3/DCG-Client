@@ -5,8 +5,11 @@ import { Link } from 'react-router-dom';
 import { setCurrentUser, setAuthToken } from '../actions/login';
 import { clearAuthToken } from '../local-storage';
 
+import './user-nav.css';
+
 export class UserNav extends React.Component {
   logOut() {
+    console.log('poop');
     this.props.dispatch(setCurrentUser(null));
     this.props.dispatch(setAuthToken(null));
     clearAuthToken();
@@ -19,7 +22,7 @@ export class UserNav extends React.Component {
             <Link to="/leaderboard">Leaderboard</Link>
             <Link to="/picks">My Picks</Link>
           </div>
-          <a onClick={() => this.logOut()}>Log Out</a>
+          <a className="log-out-button" onClick={() => this.logOut()}>Log Out</a>
         </nav>
       </header>
     );

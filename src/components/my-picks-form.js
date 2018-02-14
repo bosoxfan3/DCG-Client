@@ -4,10 +4,12 @@ import { reduxForm, Field } from 'redux-form';
 
 import Select from './select';
 import { required } from '../validators';
+import { makePicks } from '../actions/picks';
 
 export class MyPicksForm extends React.Component {
   onSubmit(values) {
-    console.log(values);
+    this.props.dispatch(makePicks(values));
+    this.props.history.push('/leaderboard');
   }
   render() {
     const matchups = this.props.matchupData.map((matchup, index) => {

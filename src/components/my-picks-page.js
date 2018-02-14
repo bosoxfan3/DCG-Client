@@ -14,9 +14,6 @@ export class MyPicksPage extends React.Component {
     }
     this.props.dispatch(fetchMatchupData());
   }
-  componentWillReceiveProps(newProps) {
-    console.log(newProps.matchupData);
-  }
   render() {
     if (!this.props.loggedIn) {
       return <Redirect to="/" />;
