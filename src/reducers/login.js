@@ -15,6 +15,7 @@ const initialState = {
   currentUser: null,
   showLoginForm: false,
   showSignupForm: false,
+  picks: {},
   error: null
 };
 
@@ -26,7 +27,7 @@ export default function reducer(state = initialState, action) {
   } 
   else if (action.type === SET_CURRENT_USER) {
     return Object.assign({}, state, {
-      currentUser: action.currentUser
+      currentUser: action.currentUser,
     });
   }
   else if (action.type === TOGGLE_LOGIN_FORM) {
@@ -40,7 +41,6 @@ export default function reducer(state = initialState, action) {
     });
   }
   else if (action.type === MAKE_PICKS_SUCCESS) {
-    alert((action.data));
     return Object.assign({}, state, {
       currentUser: action.data,
       error: null
