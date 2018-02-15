@@ -4,14 +4,11 @@ import { Redirect } from 'react-router-dom';
 
 import UserNav from './user-nav';
 
-import { fetchMatchupData } from '../actions/matchups';
-
-export class MyPicksPage extends React.Component {
+export class EditPicksPage extends React.Component {
   componentDidMount() {
     if (!this.props.loggedIn) {
       return;
     }
-    this.props.dispatch(fetchMatchupData());
   }
   render() {
     if (!this.props.loggedIn) {
@@ -20,15 +17,14 @@ export class MyPicksPage extends React.Component {
     return (
       <div>
         <UserNav />
-        <h1>My Picks Page</h1>
+        <h1>Edit Picks Page</h1>
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  loggedIn: state.auth.currentUser !== null,
-  matchupData: state.matchups.matchups
+  loggedIn: state.auth.currentUser !== null
 });
 
-export default connect(mapStateToProps)(MyPicksPage);
+export default connect(mapStateToProps)(EditPicksPage);

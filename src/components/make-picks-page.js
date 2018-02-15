@@ -3,10 +3,11 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 import UserNav from './user-nav';
+import MakePicksForm from './make-picks-form';
 
 import { fetchMatchupData } from '../actions/matchups';
 
-export class MyPicksPage extends React.Component {
+export class MakePicksPage extends React.Component {
   componentDidMount() {
     if (!this.props.loggedIn) {
       return;
@@ -20,7 +21,8 @@ export class MyPicksPage extends React.Component {
     return (
       <div>
         <UserNav />
-        <h1>My Picks Page</h1>
+        <h1>Make Picks Page</h1>
+        <MakePicksForm history={this.props.history} />
       </div>
     );
   }
@@ -31,4 +33,4 @@ const mapStateToProps = state => ({
   matchupData: state.matchups.matchups
 });
 
-export default connect(mapStateToProps)(MyPicksPage);
+export default connect(mapStateToProps)(MakePicksPage);

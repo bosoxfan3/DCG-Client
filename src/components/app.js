@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import LandingPage from './landing-page';
 import LeaderboardPage from './leaderboard-page';
 import MyPicksPage from './my-picks-page';
+import EditPicksPage from './edit-picks-page';
+import MakePicksPage from './make-picks-page';
 
 import { refreshAuthToken } from '../actions/login';
 
@@ -42,7 +44,9 @@ export class App extends React.Component {
         <main>
           <Route exact path='/' component={LandingPage} />
           <Route exact path='/leaderboard' component={LeaderboardPage} />
-          <Route exact path='/picks' component={MyPicksPage} />
+          <Route exact path='/my-picks' component={MyPicksPage} />
+          <Route exact path='/edit-picks' component={EditPicksPage} />
+          <Route exact path='/make-picks' component={MakePicksPage} />
         </main>
       </div>
     );

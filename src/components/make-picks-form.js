@@ -6,7 +6,7 @@ import Select from './select';
 import { required } from '../validators';
 import { makePicks } from '../actions/picks';
 
-export class MyPicksForm extends React.Component {
+export class MakePicksForm extends React.Component {
   onSubmit(values) {
     this.props.dispatch(makePicks(values));
     this.props.history.push('/leaderboard');
@@ -37,13 +37,14 @@ export class MyPicksForm extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    matchupData: state.matchups.matchups
+    matchupData: state.matchups.matchups,
+    user: state.auth.user
   }
 };
 
-MyPicksForm = connect(mapStateToProps)(MyPicksForm);
-MyPicksForm = reduxForm({
-  form: 'my-picks'
-})(MyPicksForm);
+MakePicksForm = connect(mapStateToProps)(MakePicksForm);
+MakePicksForm = reduxForm({
+  form: 'make-picks'
+})(MakePicksForm);
 
-export default MyPicksForm;
+export default MakePicksForm;
