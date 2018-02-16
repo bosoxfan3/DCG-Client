@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom';
 
 import UserNav from './user-nav';
 import MakePicksForm from './make-picks-form';
+import { getUser, getAllUsers } from '../actions/picks';
 
 import { fetchMatchupData } from '../actions/matchups';
 
@@ -13,6 +14,8 @@ export class MakePicksPage extends React.Component {
       return;
     }
     this.props.dispatch(fetchMatchupData());
+    this.props.dispatch(getUser());
+    this.props.dispatch(getAllUsers());
   }
   render() {
     if (!this.props.loggedIn) {

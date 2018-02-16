@@ -1,13 +1,16 @@
 import {
   GET_USER_SUCCESS,
   GET_USER_ERROR,
+  GET_ALL_USERS_SUCCESS,
+  GET_ALL_USERS_ERROR,
   MAKE_PICKS_SUCCESS,
   MAKE_PICKS_ERROR
 } from '../actions/picks';
 
 const initialState = {
   user: null,
-  error: null
+  error: null,
+  allUsers: null
 };
 
 export default function reducer(state = initialState, action) {
@@ -18,6 +21,17 @@ export default function reducer(state = initialState, action) {
     });
   }
   else if (action.type === GET_USER_ERROR) {
+    return Object.assign({}, state, {
+      error: action.error
+    });
+  }
+  else if (action.type === GET_ALL_USERS_SUCCESS) {
+    return Object.assign({}, state, {
+      allUsers: action.data,
+      error: null
+    });
+  }
+  else if (action.type === GET_ALL_USERS_ERROR) {
     return Object.assign({}, state, {
       error: action.error
     });

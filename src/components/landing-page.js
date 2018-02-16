@@ -8,7 +8,7 @@ import Footer from './footer';
 
 export function LandingPage(props) {
   if (props.loggedIn) {
-    return <Redirect to='/leaderboard' />;
+    return <Redirect to='/make-picks' />;
   }
   return (
     <div>

@@ -2,18 +2,19 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import UserNav from './user-nav';
-
-import { getUser } from '../actions/picks';
+import Leaderboard from './leaderboard';
 
 export class LeaderboardPage extends React.Component {
   componentDidMount() {
     if (!this.props.loggedIn) {
       return;
     }
-    this.props.dispatch(getUser());
+    // this.props.dispatch(getUser());
+    // this.props.dispatch(getAllUsers());
   }
   render() {
-    console.log(this.props.user);
+    // console.log(this.props.user);
+    console.log(this.props.allUsers);
     if (!this.props.loggedIn) {
       return <Redirect to="/" />;
     }
@@ -21,6 +22,7 @@ export class LeaderboardPage extends React.Component {
       <div>
         <UserNav />
         <h1>Leaderboard</h1>
+        <Leaderboard />
       </div>
     );
   }
@@ -29,7 +31,8 @@ export class LeaderboardPage extends React.Component {
 const mapStateToProps = state => ({
   loggedIn: state.auth.currentUser !== null,
   currentUser: state.auth.currentUser,
-  user: state.users.user
+  user: state.users.user,
+  allUsers: state.users.allUsers
 });
 
 export default connect(mapStateToProps)(LeaderboardPage);
