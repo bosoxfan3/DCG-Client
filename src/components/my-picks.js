@@ -6,14 +6,24 @@ export class MyPicks extends React.Component {
     this.props.history.push('/edit-picks');
   }
   render() {
-    let picks;
+    let picks = [];
     for (const key in this.props.picks) {
-      picks += `<h1>${this.props.picks[key]}</h1>`;
+      picks.push(this.props.picks[key]);
     };
+    const userpicks = picks.map((pick, index) => {
+      return (<h1 key={index}>{pick}</h1>);
+    });
     return (
       <div>
-        {picks}
+        {userpicks}
+        <button onClick={() => this.switchToEditingPage()}>Edit</button>
       </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  picks: state.users.user.picks
+});
+
+export default connect(mapStateToProps)(MyPicks);
