@@ -4,16 +4,18 @@ import { Redirect } from 'react-router-dom';
 import UserNav from './user-nav';
 import Leaderboard from './leaderboard';
 
+import { getUser } from '../actions/picks';
+
 export class LeaderboardPage extends React.Component {
   componentDidMount() {
     if (!this.props.loggedIn) {
       return;
     }
-    // this.props.dispatch(getUser());
+    this.props.dispatch(getUser());
     // this.props.dispatch(getAllUsers());
   }
   render() {
-    // console.log(this.props.user);
+    console.log(this.props.user);
     console.log(this.props.allUsers);
     if (!this.props.loggedIn) {
       return <Redirect to="/" />;
