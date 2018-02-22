@@ -37,6 +37,39 @@ export const makePicksError = error => ({
   error
 });
 
+export const UPDATE_SCORES_SUCCESS = 'UPDATE_SCORES_SUCCESS';
+export const updateScoresSuccess = data => ({
+  type: UPDATE_SCORES_SUCCESS,
+  data
+});
+
+export const UPDATE_SCORES_ERROR = 'UPDATE_SCORES_ERROR';
+export const updateScoresError = error => ({
+  type: UPDATE_SCORES_ERROR,
+  error
+});
+
+export const updateScores = users => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+  console.log(users);
+  return fetch(`${API_BASE_URL}/users/scores`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${authToken}`,
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(users)
+  })
+  .then(console.log(JSON.stringify(users)))
+  .then(res => normalizeResponseErrors(res))
+  .then(res => res.json())
+  .then(data => dispatch(updateScoresSuccess(data)))
+  .catch(err => {
+    dispatch(updateScoresError(err));
+  });
+};
+
 export const getUser = () => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
   const username = getState().auth.currentUser.username;

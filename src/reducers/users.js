@@ -4,7 +4,9 @@ import {
   GET_ALL_USERS_SUCCESS,
   GET_ALL_USERS_ERROR,
   MAKE_PICKS_SUCCESS,
-  MAKE_PICKS_ERROR
+  MAKE_PICKS_ERROR,
+  UPDATE_SCORES_SUCCESS,
+  UPDATE_SCORES_ERROR
 } from '../actions/picks';
 
 const initialState = {
@@ -43,6 +45,17 @@ export default function reducer(state = initialState, action) {
     });
   }
   else if (action.type === MAKE_PICKS_ERROR) {
+    return Object.assign({}, state, {
+      error: action.error
+    });
+  }
+  else if (action.type === UPDATE_SCORES_SUCCESS) {
+    return Object.assign({}, state, {
+      allUsers: action.data,
+      error: null
+    });
+  }
+  else if (action.type === UPDATE_SCORES_ERROR) {
     return Object.assign({}, state, {
       error: action.error
     });

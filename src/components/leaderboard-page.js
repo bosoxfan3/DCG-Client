@@ -5,6 +5,7 @@ import UserNav from './user-nav';
 import Leaderboard from './leaderboard';
 
 import { getUser } from '../actions/picks';
+import { updateScores } from '../actions/picks';
 
 export class LeaderboardPage extends React.Component {
   componentDidMount() {
@@ -13,6 +14,9 @@ export class LeaderboardPage extends React.Component {
     }
     this.props.dispatch(getUser());
     // this.props.dispatch(getAllUsers());
+  }
+  submitAllPicks() {
+    this.props.dispatch(updateScores(this.props.allUsers))
   }
   render() {
     console.log(this.props.user);
@@ -25,6 +29,7 @@ export class LeaderboardPage extends React.Component {
         <UserNav />
         <h1>Leaderboard</h1>
         <Leaderboard />
+        <button type="button" onClick={() => this.submitAllPicks()}>Get Scores</button>
       </div>
     );
   }
