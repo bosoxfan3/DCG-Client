@@ -49,9 +49,8 @@ export const updateScoresError = error => ({
   error
 });
 
-export const updateScores = users => (dispatch, getState) => {
+export const updateScores = () => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  console.log(users);
   return fetch(`${API_BASE_URL}/users/scores`, {
     method: 'POST',
     headers: {
@@ -59,9 +58,8 @@ export const updateScores = users => (dispatch, getState) => {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(users)
+    body: {}
   })
-  .then(console.log(JSON.stringify(users)))
   .then(res => normalizeResponseErrors(res))
   .then(res => res.json())
   .then(data => dispatch(updateScoresSuccess(data)))

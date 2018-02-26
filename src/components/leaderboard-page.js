@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import UserNav from './user-nav';
 import Leaderboard from './leaderboard';
 
-import { getUser } from '../actions/picks';
+import { getUser, getAllUsers } from '../actions/picks';
 import { updateScores } from '../actions/picks';
 
 export class LeaderboardPage extends React.Component {
@@ -13,10 +13,10 @@ export class LeaderboardPage extends React.Component {
       return;
     }
     this.props.dispatch(getUser());
-    // this.props.dispatch(getAllUsers());
+    this.props.dispatch(getAllUsers());
   }
   submitAllPicks() {
-    this.props.dispatch(updateScores(this.props.allUsers))
+    this.props.dispatch(updateScores())
   }
   render() {
     console.log(this.props.user);
