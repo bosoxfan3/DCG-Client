@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 
 import { toggleLoginForm, toggleSignupForm } from '../actions/login';
 
+import './landing-page-nav.css';
+
 export class LandingPageNav extends React.Component {
   toggleLoginForm() {
     if (this.props.showSignupForm) {
@@ -18,10 +20,10 @@ export class LandingPageNav extends React.Component {
   }
   render() {
     return (
-      <nav>
-        <h1>DCG Pick'Em</h1>
-        <div>
-          <a onClick={() => this.toggleLoginForm()}>Log In</a>
+      <nav className="landing-page-nav">
+        <h1 className="app-title">DCG Pick'Em</h1>
+        <div className="login-signup-links">
+          <a className="login-link" onClick={() => this.toggleLoginForm()}>Log In</a>
           <a onClick={() => this.toggleSignupForm()}>Sign Up</a>
         </div>
       </nav>

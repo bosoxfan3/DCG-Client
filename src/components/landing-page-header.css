@@ -1,0 +1,8 @@
+.landing-page-header .login-signup-forms {
+  float: right;
+  position: relative;
+  top: 32px;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color: lightblue;
+}

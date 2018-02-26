@@ -1,0 +1,22 @@
+.landing-page-nav {
+  background-color: #cc99ff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.landing-page-nav .login-signup-links {
+  float: right;
+  position: relative;
+  top: 15px;
+  padding-right: 5px;
+}
+
+.landing-page-nav .app-title {
+  display: inline-block;
+  margin: 10px 0 10px 0;
+}
+
+.landing-page-nav .login-link {
+  padding-right: 10px;
+}

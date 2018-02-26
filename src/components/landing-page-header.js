@@ -5,6 +5,8 @@ import LoginForm from './login-form';
 import SignupForm from './signup-form';
 import LandingPageNav from './landing-page-nav';
 
+import './landing-page-header.css'
+
 export function LandingPageHeader(props) {
   let signupForm;
   let loginForm;
@@ -15,10 +17,12 @@ export function LandingPageHeader(props) {
     loginForm = <LoginForm />;
   }
   return (
-    <header>
+    <header className="landing-page-header">
       <LandingPageNav />
-      {signupForm}
-      {loginForm}
+      <div className="login-signup-forms">
+        {signupForm}
+        {loginForm}
+      </div>
     </header>
   );
 }
