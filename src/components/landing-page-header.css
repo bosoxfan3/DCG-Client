@@ -1,6 +1,7 @@
 .landing-page-header .login-signup-forms {
   width: 30%;
   position: fixed;
+  z-index: 1000;
   right: 0;
   padding-right: 5px;
   padding-left: 5px;
