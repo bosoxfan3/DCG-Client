@@ -53,15 +53,25 @@
 }
 
 #landing-page-main .title-area {
-  padding-top: 100px;
-  background: url('http://prod.static.49ers.clubs.nfl.com/assets/images/longform/a-staley-gif1.gif');
+  /* padding-top: 100px; */
+  background: url('https://images.pexels.com/photos/128457/pexels-photo-128457.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: 200px;
+  height: 500px;
 }
 
 #landing-page-main .title-section {
   text-align: center;
   color: white;
+  position: absolute;
+  top: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+}
+
+.rules-section {
+  height: 1000px;
 }

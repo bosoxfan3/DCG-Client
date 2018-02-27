@@ -1,0 +1,30 @@
+.signup-form {
+  text-align: center;
+}
+
+.signup-form h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.signup-form label, .signup-form button, .signup-form .form-error {
+  font-family: 'Slabo 27px', serif;
+}
+
+.signup-form input#name, .signup-form input#username,
+.signup-form input#password, .signup-form input#confirmPassword {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 30px;
+  width: 80%;
+}
+
+.signup-form .signup-button {
+  border-color: transparent;
+  padding: 10px;
+  font-style: bold;
+  font-size: 10pt;
+  width: 80%;
+  color: white;
+  background-color: rgb(10, 115, 141);
+  margin-bottom: 25px;
+}

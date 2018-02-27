@@ -6,6 +6,8 @@ import { login } from '../actions/login';
 import { required, nonEmpty, matches, length, isTrimmed } from '../validators';
 import Input from './input';
 
+import './signup-form.css';
+
 export class SignupForm extends React.Component {
   onSubmit(values) {
     const {username, password, name } = values;
@@ -16,12 +18,12 @@ export class SignupForm extends React.Component {
   }
   render() {
     return (
-      <div>
         <form
+          className="signup-form"
           onSubmit={this.props.handleSubmit(values => 
             this.onSubmit(values)
           )}>
-          <h2>Sign Up</h2>
+          <h3>Sign Up</h3>
           <label htmlFor="name">Entry Name</label>
           <Field 
             component={Input} 
@@ -52,12 +54,12 @@ export class SignupForm extends React.Component {
             validate={[required, nonEmpty, matches('password')]}
           />
           <button
+            className="signup-button"
             type="submit"
             disabled={this.props.pristine || this.props.submitting}>
             Sign Up
           </button>
         </form>
-      </div>
     );
   }
 }

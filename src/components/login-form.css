@@ -1,0 +1,29 @@
+.login-form {
+  text-align: center;
+}
+
+.login-form h2 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.login-form label, .login-form button {
+  font-family: 'Slabo 27px', serif;
+}
+
+.login-form input#username, .login-form input#password {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 30px;
+  width: 80%;
+}
+
+.login-form .login-button {
+  border-color: transparent;
+  padding: 10px;
+  font-style: bold;
+  font-size: 10pt;
+  width: 80%;
+  color: white;
+  background-color: rgb(10, 115, 141);
+  margin-bottom: 25px;
+}
