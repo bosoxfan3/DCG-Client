@@ -10,7 +10,7 @@ export function LandingPageMain() {
         <div className="row">
           <div className="col-12">
             <section className="title-section">
-              <h1>DCG Pick'Em</h1>
+              <h1>Pick 16</h1>
               <h2>An NFL Pick'Em Game</h2>
             </section>
           </div>

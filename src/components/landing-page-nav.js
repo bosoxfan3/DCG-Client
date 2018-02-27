@@ -21,7 +21,7 @@ export class LandingPageNav extends React.Component {
   render() {
     return (
       <nav className="landing-page-nav">
-        <h1 className="app-title">DCG Pick'Em</h1>
+        <h1 className="app-title">Pick 16</h1>
         <div className="login-signup-links">
           <a className="login-link" onClick={() => this.toggleLoginForm()}>Log In</a>
           <a onClick={() => this.toggleSignupForm()}>Sign Up</a>

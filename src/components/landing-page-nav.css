@@ -1,8 +1,10 @@
 .landing-page-nav {
-  background-color: #cc99ff;
+  background-color: rgb(10, 37, 87);
+  color: white;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 .landing-page-nav .login-signup-links {
