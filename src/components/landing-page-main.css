@@ -62,8 +62,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 500px;
-  margin-top: 57px;
+  height: 550px;
+  padding-top: 57px;
 }
 
 #landing-page-main .title-section {
@@ -75,13 +75,11 @@
 #landing-page-main .title-section h1 {
   font-size: 70pt;
   position: relative;
-  top: 45px;
+  top: 40px;
 }
 
 #landing-page-main .title-section h2 {
   font-size: 40pt;
-  position: relative;
-  bottom: 10px;
 }
 
 #landing-page-main .rules-section {
