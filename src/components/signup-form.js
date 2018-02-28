@@ -38,6 +38,7 @@ export class SignupForm extends React.Component {
             component={Input}
             type="text"
             name="username"
+            placeholder="bob92"
             validate={[required, nonEmpty, isTrimmed]}
           />
           <label htmlFor="password">Password</label>

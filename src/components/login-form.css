@@ -6,7 +6,7 @@
   font-family: 'Bree serif', serif;
 }
 
-.login-form label, .login-form button {
+.login-form label, .login-form button, .login-form .form-error {
   font-family: 'Bree serif', serif;
   font-size: 12pt;
 }
@@ -16,6 +16,8 @@
   margin-bottom: 20px;
   height: 30px;
   width: 80%;
+  font-family: 'Bree serif', serif;
+  font-size: 10pt;
 }
 
 .login-form .login-button {
