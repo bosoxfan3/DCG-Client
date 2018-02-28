@@ -24,7 +24,6 @@ export class MakePicksPage extends React.Component {
     return (
       <div>
         <UserNav />
-        <h1>Make Picks Page</h1>
         <MakePicksForm history={this.props.history} />
       </div>
     );

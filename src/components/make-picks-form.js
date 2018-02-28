@@ -6,6 +6,8 @@ import Select from './select';
 import { required } from '../validators';
 import { makePicks } from '../actions/picks';
 
+import './make-picks-form.css';
+
 export class MakePicksForm extends React.Component {
   onSubmit(values) {
     this.props.dispatch(makePicks(values));
@@ -24,13 +26,22 @@ export class MakePicksForm extends React.Component {
       )
     });
     return (
-      <form
-        onSubmit={this.props.handleSubmit(values => 
-          this.onSubmit(values)
-        )}>
-        {matchups}
-        <button type="submit">Submit</button>
-      </form>
+      <div id="picks-form" className="picks-form-background">
+        <div className="row">
+          <div className="main-area col-12">
+            <section className="picks-form-section">
+              <h1>Week 17</h1>
+              <form
+                onSubmit={this.props.handleSubmit(values => 
+                  this.onSubmit(values)
+                )}>
+                {matchups}
+                <button type="submit">Submit</button>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
     );
   }
 }
