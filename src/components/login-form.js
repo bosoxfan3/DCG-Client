@@ -1,7 +1,7 @@
 import React from 'react';
 import { Field, reduxForm, focus } from 'redux-form';
 
-import { login } from '../actions/login';
+import { login, toggleLoginForm } from '../actions/login';
 import { required, nonEmpty } from '../validators';
 import Input from './input';
 
@@ -9,7 +9,8 @@ import './login-form.css';
 
 export class LoginForm extends React.Component {
   onSubmit(values) {
-    return this.props.dispatch(login(values.username, values.password));
+    this.props.dispatch(login(values.username, values.password));
+    this.props.dispatch(toggleLoginForm());
   }
   render() {
     let error;

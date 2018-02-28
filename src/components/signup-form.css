@@ -3,16 +3,21 @@
 }
 
 .signup-form h3 {
-  font-family: 'Oswald', sans-serif;
+  /* font-family: 'Oswald', sans-serif; */
+  /* font-family: 'Krona One', sans-serif; */
+  font-family: 'Bree serif', serif;
 }
 
 .signup-form label, .signup-form button, .signup-form .form-error {
-  font-family: 'Slabo 27px', serif;
+  /* font-family: 'Slabo 27px', serif; */
+  /* font-family: 'Krona One', sans-serif; */
+  font-family: 'Bree serif', serif;
+  font-size: 12pt;
 }
 
 .signup-form input#name, .signup-form input#username,
 .signup-form input#password, .signup-form input#confirmPassword {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 20px;
   height: 30px;
   width: 80%;
@@ -22,7 +27,7 @@
   border-color: transparent;
   padding: 10px;
   font-style: bold;
-  font-size: 10pt;
+  font-size: 12pt;
   width: 80%;
   color: white;
   background-color: rgb(10, 115, 141);

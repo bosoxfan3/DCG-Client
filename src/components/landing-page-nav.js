@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { toggleLoginForm, toggleSignupForm } from '../actions/login';
 
@@ -21,10 +22,11 @@ export class LandingPageNav extends React.Component {
   render() {
     return (
       <nav className="landing-page-nav">
-        <h1 className="app-title">Pick 16</h1>
+        <Link className="app-title" to="/">Pick 16</Link>
+        <img className="logo" src="https://image.flaticon.com/icons/svg/363/363310.svg" alt="football logo" />
         <div className="login-signup-links">
           <a className="login-link" onClick={() => this.toggleLoginForm()}>Log In</a>
-          <a onClick={() => this.toggleSignupForm()}>Sign Up</a>
+          <a className="signup-link" onClick={() => this.toggleSignupForm()}>Sign Up</a>
         </div>
       </nav>
     );

@@ -10,15 +10,32 @@
 .landing-page-nav .login-signup-links {
   float: right;
   position: relative;
-  top: 15px;
+  top: 14px;
   padding-right: 5px;
+  font-family: 'Bree serif', serif;
+  font-size: 16pt;
 }
 
 .landing-page-nav .app-title {
   display: inline-block;
-  margin: 10px 0 10px 0;
+  margin: 7px 0 10px 5px;
+  font-size: 22pt;
+  text-decoration: none;
+  color: white;
+  font-family: 'Bree serif', serif;
+}
+
+.landing-page-nav .logo {
+  width: 22px;
+  position: relative;
+  left: 4px;
+  top: 1px;
 }
 
 .landing-page-nav .login-link {
   padding-right: 10px;
+}
+
+.landing-page-nav .login-link:hover, .landing-page-nav .signup-link:hover {
+  cursor: pointer;
 }
