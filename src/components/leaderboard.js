@@ -1,24 +1,55 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import './leaderboard-main.css';
+
 export class Leaderboard extends React.Component {
   render() {
     const allUsers = this.props.allUsers.map((user, index) => {
       return (
-        <div key={index}>
-        <div>
-          <h2>{user.name}</h2>
-        </div>
-        <div>
-          <h2>{user.points}</h2>
-        </div>
+        <div className="rankings" key={index}>
+          <div className="col-1">
+            <h3>{index+1}</h3>
+          </div>
+          <div className="col-4">
+            <h3>{user.name}</h3>
+          </div>
+          <div className="col-4">
+            <h3>{user.username}</h3>
+          </div>
+          <div className="col-3">
+            <h3>{user.points}</h3>
+          </div>
         </div>
       )
-    })
+    });
+    const titles = (
+      <div className="titles">
+        <div className="col-1">
+          <h2>Rank</h2>
+        </div>
+        <div className="col-4">
+          <h2>Entry Name</h2>
+        </div>
+        <div className="col-4">
+          <h2>Username</h2>
+        </div>
+        <div className="col-3">
+          <h2>Total Points</h2>
+        </div>
+      </div>
+    )
     return (
-      <div>
-        <h1>Entry Names and Points</h1>
-        {allUsers}
+      <div id="leaderboard-main" className="leaderboard-background">
+        <div className="row">
+          <div className="leaderboard-section">
+            <div className="leaderboard-area col-12">
+              <h1>Leaderboard</h1>
+              {titles}
+              {allUsers}
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

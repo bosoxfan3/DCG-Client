@@ -1,0 +1,33 @@
+.leaderboard-background {
+  background-image: url('https://images.unsplash.com/photo-1431324003833-a7d76ef5770b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2bf164853bd15799731c8a1b5cafe931&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#leaderboard-main .leaderboard-area {
+  margin-top: 120px;
+  background-color: white;
+  padding-bottom: 40px;
+  border-radius: 2px;
+  margin-bottom: 50px;
+}
+
+#leaderboard-main .leaderboard-area h1 {
+  font-family: 'Bree serif', serif;
+  font-size: 32pt;
+  text-align: center;
+}
+
+#leaderboard-main .titles {
+  text-align: center;
+  font-family: 'Bree serif', serif;
+  color: rgb(111, 182, 206);
+}
+
+#leaderboard-main .rankings {
+  text-align: center;
+  font-family: 'Bree serif', serif;
+  color: rgb(10, 37, 87);
+}

@@ -27,9 +27,8 @@ export class LeaderboardPage extends React.Component {
     return (
       <div>
         <UserNav />
-        <h1>Leaderboard</h1>
         <Leaderboard />
-        <button type="button" onClick={() => this.submitAllPicks()}>Get Scores</button>
+        <button hidden type="button" onClick={() => this.submitAllPicks()}>Get Scores</button>
       </div>
     );
   }
