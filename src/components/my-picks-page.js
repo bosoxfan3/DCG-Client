@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 import UserNav from './user-nav';
-import MyPicks from './my-picks';
+import MyPicksMain from './my-picks-main';
 
 import { fetchMatchupData } from '../actions/matchups';
 
@@ -21,7 +21,7 @@ export class MyPicksPage extends React.Component {
     return (
       <div>
         <UserNav />
-        <MyPicks history={this.props.history} />
+        <MyPicksMain history={this.props.history} />
       </div>
     );
   }

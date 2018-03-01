@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import './my-picks-main.css';
 
-export class MyPicks extends React.Component {
+export class MyPicksMain extends React.Component {
   switchToEditingPage() {
     this.props.history.push('/edit-picks');
   }
@@ -33,4 +33,4 @@ const mapStateToProps = state => ({
   picks: state.users.user.picks
 });
 
-export default connect(mapStateToProps)(MyPicks);
+export default connect(mapStateToProps)(MyPicksMain);

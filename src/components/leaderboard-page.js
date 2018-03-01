@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import UserNav from './user-nav';
-import Leaderboard from './leaderboard';
+import LeaderboardMain from './leaderboard-main';
 
 import { getUser, getAllUsers } from '../actions/picks';
 import { updateScores } from '../actions/picks';
@@ -27,7 +27,7 @@ export class LeaderboardPage extends React.Component {
     return (
       <div>
         <UserNav />
-        <Leaderboard />
+        <LeaderboardMain />
         <button hidden type="button" onClick={() => this.submitAllPicks()}>Get Scores</button>
       </div>
     );

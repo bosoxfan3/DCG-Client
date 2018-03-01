@@ -3,14 +3,13 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 import UserNav from './user-nav';
-import EditPicksForm from './edit-picks-form';
+import EditPicksMain from './edit-picks-main';
 
 export class EditPicksPage extends React.Component {
   componentDidMount() {
     if (!this.props.loggedIn) {
       return;
     }
-    // this.props.dispatch(getUser());
   }
   render() {
     if (!this.props.loggedIn) {
@@ -19,7 +18,7 @@ export class EditPicksPage extends React.Component {
     return (
       <div>
         <UserNav />
-        <EditPicksForm history={this.props.history} />
+        <EditPicksMain history={this.props.history} />
       </div>
     );
   }

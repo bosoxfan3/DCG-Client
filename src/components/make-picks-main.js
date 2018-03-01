@@ -1,37 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { reduxForm, change, Field } from 'redux-form';
+import { reduxForm, Field } from 'redux-form';
 
-import { makePicks } from '../actions/picks';
-import { required } from '../validators';
 import Select from './select';
+import { required } from '../validators';
+import { makePicks } from '../actions/picks';
 
-import './edit-picks-main.css';
+import './make-picks-main.css';
 
-export class EditPicksForm extends React.Component {
+export class MakePicksMain extends React.Component {
   onSubmit(values) {
     this.props.dispatch(makePicks(values));
     this.props.history.push('/leaderboard');
-  }
-  stopEditing() {
-    this.props.history.push('/my-picks');
-  }
-  componentDidMount() {
-    this.setDefaults();
-  }
-  setDefaults() {
-    for (let i=0; i<this.props.matchupData.length; i++) {
-      this.props.dispatch(change('edit-picks', `matchup${i}`, this.props.picks[`matchup${i}`]));
-    }
   }
   render() {
     const matchups = this.props.matchupData.map((matchup, index) => {
       return (
         <div className="matchup" key={index}>
           <h3 className="matchup-sentence">{matchup[0]}</h3>
-          <img className="matchup-sentence" src={matchup[2]} alt="team logo" />
+          <img className="matchup-sentence" src={matchup[2]} alt="" />
           <h3 className="matchup-sentence">vs.</h3>
-          <img className="matchup-sentence" src={matchup[3]} alt="team logo" />
+          <img className="matchup-sentence" src={matchup[3]} alt="" />
           <h3 className="matchup-sentence">{matchup[1]}</h3>
         </div>
       )
@@ -48,10 +37,10 @@ export class EditPicksForm extends React.Component {
       )
     });
     return (
-      <div id="edit-picks-main" className="edit-picks-background">
+      <div id="make-picks-form" className="picks-form-background">
         <div className="row">
-          <div className="edit-picks-section">
-            <div className="form-area col-12">
+          <div className="picks-form-section">
+            <div className="main-area col-12">
               <h1>Week 17</h1>
               <section className="col-3">
                 <form
@@ -60,12 +49,9 @@ export class EditPicksForm extends React.Component {
                   )}>
                   {matchupSelects}
                   <div className="button-div">
-                    <button type="submit">Submit</button>
+                    <button className="submit-button" type="submit">Submit</button>
                   </div>
                 </form>
-                <div className="button-div">
-                  <button className="stop-editing-button" onClick={() => this.stopEditing()}>Go Back</button>
-                </div>
               </section>
               <div className="matchups col-9">
                 {matchups}
@@ -81,13 +67,13 @@ export class EditPicksForm extends React.Component {
 function mapStateToProps(state) {
   return {
     matchupData: state.matchups.matchups,
-    picks: state.users.user.picks
+    user: state.auth.user
   }
 };
 
-EditPicksForm = connect(mapStateToProps)(EditPicksForm);
-EditPicksForm = reduxForm({
-  form: 'edit-picks',
-})(EditPicksForm);
+MakePicksMain = connect(mapStateToProps)(MakePicksMain);
+MakePicksMain = reduxForm({
+  form: 'make-picks'
+})(MakePicksMain);
 
-export default EditPicksForm;
+export default MakePicksMain;

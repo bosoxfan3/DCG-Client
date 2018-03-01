@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import './leaderboard-main.css';
 
-export class Leaderboard extends React.Component {
+export class LeaderboardMain extends React.Component {
   render() {
     const allUsers = this.props.allUsers.map((user, index) => {
       return (
@@ -59,4 +59,4 @@ const mapStateToProps = state => ({
   allUsers: state.users.allUsers
 });
 
-export default connect(mapStateToProps)(Leaderboard);
+export default connect(mapStateToProps)(LeaderboardMain);
