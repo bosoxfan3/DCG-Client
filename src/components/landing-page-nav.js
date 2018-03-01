@@ -22,8 +22,7 @@ export class LandingPageNav extends React.Component {
   render() {
     return (
       <nav className="landing-page-nav">
-        <Link className="app-title" to="/">Pick 16</Link>
-        <img className="logo" src="https://image.flaticon.com/icons/svg/363/363310.svg" alt="football logo" />
+        <Link className="app-title" to="/">Pick 16<img className="logo" src="https://image.flaticon.com/icons/svg/363/363310.svg" alt="football logo" /></Link>
         <div className="login-signup-links">
           <a className="login-link" onClick={() => this.toggleLoginForm()}>Log In</a>
           <a className="signup-link" onClick={() => this.toggleSignupForm()}>Sign Up</a>
