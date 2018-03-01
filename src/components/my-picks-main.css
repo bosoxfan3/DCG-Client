@@ -1,4 +1,4 @@
-.my-picks-main-background {
+.my-picks-background {
   background-image: url('https://images.unsplash.com/photo-1431324003833-a7d76ef5770b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2bf164853bd15799731c8a1b5cafe931&auto=format&fit=crop&w=1350&q=80');
   background-size: cover;
   width: 100%;
@@ -6,39 +6,64 @@
   background-repeat: no-repeat;
 }
 
-#my-picks-main .main-area {
+#my-picks-main .form-area {
   margin-top: 120px;
   background-color: white;
   padding-bottom: 40px;
   border-radius: 2px;
   margin-bottom: 50px;
-  position: relative;
-  left: 33%;
+}
+
+#my-picks-main .form-area h1 {
+  font-family: 'Bree serif', serif;
+  font-size: 32pt;
   text-align: center;
 }
 
-#my-picks-main .main-area h1 {
-  font-family: 'Bree serif', serif;
-  font-size: 32pt;
+#my-picks-main .matchups {
+  text-align: center;
 }
 
-#my-picks-main .pick {
+#my-picks-main .matchup {
   font-family: 'Anton', sans-serif;
   font-size: 18pt;
 }
 
-#my-picks-main .edit-button {
-  width: 120px;
+#my-picks-main .matchup-sentence {
+  display: inline-block;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#my-picks-main .matchup img {
+  width: 60px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  top: 12px;
+}
+
+#my-picks-main .button-div {
+  text-align: center;
+}
+
+#my-picks-main .button-div button {
+  width: 140px;
   padding: 8px;
   border-radius: 2px;
   background-color: rgb(10, 37, 87);
   color: white;
   border-color: transparent;
   font-family: 'Bree serif', serif;
-  font-size: 14pt;
+  font-size: 12pt;
   margin-top: 25px;
 }
 
-#my-picks-main .edit-button:hover {
+#my-picks-main .stop-editing-button {
+  margin-top: 15px !important;
+}
+
+#my-picks-main .button-div button:hover {
   cursor: pointer;
 }

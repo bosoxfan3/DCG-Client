@@ -5,14 +5,11 @@ import { Redirect } from 'react-router-dom';
 import UserNav from './user-nav';
 import MyPicksMain from './my-picks-main';
 
-import { fetchMatchupData } from '../actions/matchups';
-
 export class MyPicksPage extends React.Component {
   componentDidMount() {
     if (!this.props.loggedIn) {
       return;
     }
-    this.props.dispatch(fetchMatchupData());
   }
   render() {
     if (!this.props.loggedIn) {
@@ -28,8 +25,7 @@ export class MyPicksPage extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  loggedIn: state.auth.currentUser !== null,
-  matchupData: state.matchups.matchups
+  loggedIn: state.auth.currentUser !== null
 });
 
 export default connect(mapStateToProps)(MyPicksPage);

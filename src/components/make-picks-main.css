@@ -49,14 +49,14 @@
 }
 
 #make-picks-form .submit-button {
-  width: 120px;
+  width: 140px;
   padding: 8px;
   border-radius: 2px;
   background-color: rgb(10, 37, 87);
   color: white;
   border-color: transparent;
   font-family: 'Bree serif', serif;
-  font-size: 14pt;
+  font-size: 12pt;
   margin-top: 25px;
 }
 
