@@ -14,7 +14,19 @@ export class MakePicksForm extends React.Component {
     this.props.history.push('/leaderboard');
   }
   render() {
+    console.log(this.props.matchupData);
     const matchups = this.props.matchupData.map((matchup, index) => {
+      return (
+        <div className="matchup" key={index}>
+          <h3 className="matchup-sentence">{matchup[0]}</h3>
+          <img className="matchup-sentence" src={matchup[2]} alt="team logo" />
+          <h3 className="matchup-sentence">vs.</h3>
+          <img className="matchup-sentence" src={matchup[3]} alt="team logo" />
+          <h3 className="matchup-sentence">{matchup[1]}</h3>
+        </div>
+      )
+    });
+    const matchupSelects = this.props.matchupData.map((matchup, index) => {
       return (
         <Field
           component={Select}
@@ -26,19 +38,26 @@ export class MakePicksForm extends React.Component {
       )
     });
     return (
-      <div id="picks-form" className="picks-form-background">
+      <div id="make-picks-form" className="picks-form-background">
         <div className="row">
-          <div className="main-area col-12">
-            <section className="picks-form-section">
+          <div className="picks-form-section col-12">
+            <div className="main-area col-12">
               <h1>Week 17</h1>
-              <form
-                onSubmit={this.props.handleSubmit(values => 
-                  this.onSubmit(values)
-                )}>
+              <section className="col-3">
+                <form
+                  onSubmit={this.props.handleSubmit(values => 
+                    this.onSubmit(values)
+                  )}>
+                  {matchupSelects}
+                  <div className="button-div">
+                    <button className="submit-button" type="submit">Submit</button>
+                  </div>
+                </form>
+              </section>
+              <div className="matchups col-9">
                 {matchups}
-                <button type="submit">Submit</button>
-              </form>
-            </section>
+              </div>
+            </div>
           </div>
         </div>
       </div>

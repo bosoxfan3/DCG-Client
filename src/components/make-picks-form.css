@@ -4,12 +4,62 @@
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 500px;
 }
 
-#picks-form .main-area {
+#make-picks-form .main-area {
   margin-top: 120px;
-  background-color: rgb(235, 235, 235);
+  background-color: white;
   padding-bottom: 40px;
   border-radius: 2px;
+  margin-bottom: 50px;
+}
+
+#make-picks-form .picks-form-section h1 {
+  font-family: 'Bree serif', serif;
+  font-size: 32pt;
+  text-align: center;
+}
+
+#make-picks-form .matchups {
+  text-align: center;
+}
+
+#make-picks-form .matchup {
+  font-family: 'Anton', sans-serif;
+  font-size: 18pt;
+}
+
+#make-picks-form .matchup-sentence {
+  display: inline-block;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#make-picks-form .matchup img {
+  width: 60px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  top: 12px;
+}
+
+#make-picks-form .button-div {
+  text-align: center;
+}
+
+#make-picks-form .submit-button {
+  width: 120px;
+  padding: 8px;
+  border-radius: 2px;
+  background-color: rgb(10, 37, 87);
+  color: white;
+  border-color: transparent;
+  font-family: 'Bree serif', serif;
+  font-size: 14pt;
+  margin-top: 25px;
+}
+
+#make-picks-form .submit-button:hover {
+  cursor: pointer;
 }

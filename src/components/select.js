@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './select.css';
+
 export default class Select extends React.Component {
   render() {
     const options = this.props.options.map((option) => (
@@ -7,7 +9,7 @@ export default class Select extends React.Component {
     ));
     const {input, name} = this.props;
     return (
-      <div>
+      <div className="select">
         <select {...input} {...name}>
           <option value=""></option>
           {options}
