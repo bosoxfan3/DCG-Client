@@ -14,7 +14,6 @@ export class MakePicksForm extends React.Component {
     this.props.history.push('/leaderboard');
   }
   render() {
-    console.log(this.props.matchupData);
     const matchups = this.props.matchupData.map((matchup, index) => {
       return (
         <div className="matchup" key={index}>
@@ -40,7 +39,7 @@ export class MakePicksForm extends React.Component {
     return (
       <div id="make-picks-form" className="picks-form-background">
         <div className="row">
-          <div className="picks-form-section col-12">
+          <div className="picks-form-section">
             <div className="main-area col-12">
               <h1>Week 17</h1>
               <section className="col-3">

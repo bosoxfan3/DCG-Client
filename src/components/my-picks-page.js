@@ -21,7 +21,6 @@ export class MyPicksPage extends React.Component {
     return (
       <div>
         <UserNav />
-        <h1>My Picks Page</h1>
         <MyPicks history={this.props.history} />
       </div>
     );

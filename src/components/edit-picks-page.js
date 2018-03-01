@@ -19,7 +19,6 @@ export class EditPicksPage extends React.Component {
     return (
       <div>
         <UserNav />
-        <h1>Edit Picks Page</h1>
         <EditPicksForm history={this.props.history} />
       </div>
     );

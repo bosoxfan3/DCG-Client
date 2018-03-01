@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import './my-picks-main.css';
+
 export class MyPicks extends React.Component {
   switchToEditingPage() {
     this.props.history.push('/edit-picks');
@@ -11,12 +13,17 @@ export class MyPicks extends React.Component {
       picks.push(this.props.picks[key]);
     };
     const userpicks = picks.map((pick, index) => {
-      return (<h1 key={index}>{pick}</h1>);
+      return (<h2 className="pick" key={index}>{pick}</h2>);
     });
     return (
-      <div>
-        {userpicks}
-        <button onClick={() => this.switchToEditingPage()}>Edit</button>
+      <div id="my-picks-main" className="my-picks-main-background">
+        <div className="row">
+          <div className="main-area col-4">
+            <h1>My Picks</h1>
+            {userpicks}
+            <button className="edit-button" onClick={() => this.switchToEditingPage()}>Edit</button>
+          </div>
+        </div>
       </div>
     );
   }
