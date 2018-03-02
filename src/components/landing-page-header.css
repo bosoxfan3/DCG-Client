@@ -9,3 +9,33 @@
   border-radius: 2px;
   background-color: lightblue;
 }
+
+@media only screen and (max-width: 900px) {
+  .landing-page-header .login-signup-forms {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .landing-page-header .login-signup-forms {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .landing-page-header .login-signup-forms {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .landing-page-header .login-signup-forms {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .landing-page-header .login-signup-forms {
+    width: 70%;
+  }
+}
