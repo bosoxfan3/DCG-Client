@@ -23,26 +23,21 @@ export function LandingPageMain() {
           </div>
         </div>
         <div className="row">
-          <div className="rules col-4">
-            <h3>Pick the Winners</h3>
+          <div className="rules col-6">
+            <h3>Simply Pick the Winners</h3>
             <p>
-              Choose who you think will win each matchup before the first game of the week
+              Choose who you think will win each matchup. Be sure to make all your selections before
+              the first game of the week!
             </p>
-            <p>Screenshot will go here</p>
+            <img className="picks-form-screenshot" src={require("../screenshots/MakePicks.png")} alt="picks form screenshot" />
           </div>
-          <div className="rules col-4">
-            <h3>Earn Points</h3>
+          <div className="rules col-6">
+            <h3>...and Climb the Leaderboard</h3>
             <p>
-              Each and every time one of your selected teams is victorious, you'll earn one point
-            </p> 
-            <p>Screenshot</p>
-          </div>
-          <div className="rules col-4">
-            <h3>Climb the Leaderboard</h3>
-            <p>
-              See how your picks stack up against the competition over the course of the season
+              Each and every correct pick earns a point. See how your predictions stack up against 
+              the competition over the course of the season!
             </p>
-            <p>Screenshot</p>
+            <img className="leaderboard-screenshot" src={require("../screenshots/Leaderboard.png")} alt="leaderboard screenshot" />
           </div>
         </div>
       </div>

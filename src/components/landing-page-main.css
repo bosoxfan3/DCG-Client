@@ -86,9 +86,9 @@
 }
 
 #landing-page-main .rules-section {
-  height: 1000px;
   background-color: lightgray;
   text-align: center;
+  padding-bottom: 150px;
 }
 
 #landing-page-main .rules-section h1 {
@@ -100,9 +100,22 @@
 #landing-page-main h3 {
   font-family: 'Bree serif', serif;
   font-size: 18pt;
+  margin-bottom: 40px;
 }
 
 #landing-page-main p {
   font-family: 'Noto Serif', serif;
   font-size: 13pt;
+}
+
+#landing-page-main .picks-form-screenshot {
+  width: 95%;
+  height: 214px;
+  margin-top: 30px;
+}
+
+#landing-page-main .leaderboard-screenshot {
+  width: 95%;
+  height: 214px;
+  margin-top: 30px;
 }
