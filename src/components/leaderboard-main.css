@@ -135,6 +135,9 @@
 }
 
 @media only screen and (max-width: 450px) {
+  #leaderboard-main .leaderboard-area h1 {
+    font-size: 24pt;
+  }
   #leaderboard-main .titles {
     font-size: 8pt;
   }
@@ -155,5 +158,26 @@
   }
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 420px) {
+  #leaderboard-main .rankings .user {
+    display: none;
+  }
+  #leaderboard-main .titles .username {
+    display: none;
+  }
+  #leaderboard-main .col-1 {
+    width: 33.333333%;
+  }
+  #leaderboard-main .col-3 {
+    width: 33.333333%;
+  }
+  #leaderboard-main .entry-name h2 {
+    margin-left: 0px;
+  }
+  #leaderboard-main .entry h3 {
+    margin-left: 0px;
+  }
+  #leaderboard-main .rank h3 {
+    margin-left: 0px;
+  }
 }
