@@ -53,3 +53,21 @@ select::-ms-expand {
   transition: .25s all ease;
   color: white;
 }
+
+@media only screen and (max-width: 730px) {
+  select {
+    font-size: 12pt;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  select {
+    font-size: 10pt;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  select {
+    font-size: 12pt;
+  }
+}
