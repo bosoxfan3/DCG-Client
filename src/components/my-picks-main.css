@@ -174,7 +174,7 @@
   #my-picks-main .versus {
     margin-bottom: 0px;
     position: relative;
-    bottom: 5px;
+    bottom: 7px;
     margin-right: 10px;
     margin-left: 10px;
   }
@@ -189,5 +189,8 @@
 @media only screen and (max-width: 450px) {
   #my-picks-main .form-area h1 {
     font-size: 24pt;
+  }
+  #my-picks-main .matchups {
+    padding-top: 3px;
   }
 }
