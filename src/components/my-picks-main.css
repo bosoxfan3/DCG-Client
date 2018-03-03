@@ -160,21 +160,26 @@
 @media only screen and (max-width: 520px) {
   #my-picks-main .matchup img {
     display: unset;
-    height: 48px;
+    height: 46px;
     margin-top: 0px;
     margin-bottom: 2px;
-    top: 11px;
+    top: 0px;
   }
   #my-picks-main .team {
     display: none;
   }
+  #my-picks-main .matchups {
+    padding-top: 10px;
+  }
   #my-picks-main .matchup {
     margin-top: 0px;
+    margin-bottom: 4px;
   }
   #my-picks-main .versus {
     margin-bottom: 0px;
     position: relative;
-    bottom: 7px;
+    bottom: 15px;
+    margin-top: 0px;
     margin-right: 10px;
     margin-left: 10px;
   }
