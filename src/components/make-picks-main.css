@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
 }
 
-#make-picks-form .main-area {
+#make-picks-main .main-area {
   margin-top: 120px;
   background-color: rgb(247, 247, 247);
   padding-bottom: 40px;
@@ -14,28 +14,28 @@
   margin-bottom: 50px;
 }
 
-#make-picks-form .picks-form-section h1 {
+#make-picks-main .picks-form-section h1 {
   font-family: 'Bree serif', serif;
   font-size: 32pt;
   text-align: center;
 }
 
-#make-picks-form .matchups {
+#make-picks-main .matchups {
   text-align: center;
 }
 
-#make-picks-form .matchup {
+#make-picks-main .matchup {
   font-family: 'Anton', sans-serif;
   font-size: 18pt;
 }
 
-#make-picks-form .matchup-sentence {
+#make-picks-main .matchup-sentence {
   display: inline-block;
   margin-top: 3px;
   margin-bottom: 3px;
 }
 
-#make-picks-form .matchup img {
+#make-picks-main .matchup img {
   width: 60px;
   height: 40px;
   margin-left: 10px;
@@ -44,11 +44,11 @@
   top: 11px;
 }
 
-#make-picks-form .button-div {
+#make-picks-main .button-div {
   text-align: center;
 }
 
-#make-picks-form .submit-button {
+#make-picks-main .submit-button {
   width: 140px;
   padding: 8px;
   border-radius: 2px;
@@ -60,6 +60,145 @@
   margin-top: 25px;
 }
 
-#make-picks-form .submit-button:hover {
+#make-picks-main .submit-button:hover {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 870px) {
+  #make-picks-main .matchup img {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 50px;
+  }
+  #make-picks-main .col-3 {
+    width: 30%;
+  }
+  #make-picks-main .col-9 {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  #make-picks-main .matchup {
+    font-size: 16pt;
+    margin-bottom: 1px;
+  }
+  #make-picks-main .matchup img {
+    top: 12px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #make-picks-main .matchup {
+    font-size: 15pt;
+  }
+  #make-picks-main .matchup img {
+    top: 13px;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  #make-picks-main .matchup {
+    font-size: 14pt;
+    margin-bottom: 2px;
+  }
+  #make-picks-main .matchup img {
+    top: 14px;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  #make-picks-main .matchup {
+    font-size: 13pt;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #make-picks-main .col-3 {
+    width: 35%;
+  }
+  #make-picks-main .col-9 {
+    width: 65%;
+  }
+  #make-picks-main .matchup {
+    margin-top: 17px;
+  }
+  #make-picks-main .matchup img {
+    display: none;
+  }
+  #make-picks-main .matchup-sentence {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  #make-picks-main .matchup-sentence {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #make-picks-main .versus {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  #make-picks-main .matchup {
+    font-size: 12pt;
+  }
+  #make-picks-main .matchup-sentence {
+    margin-bottom: 11px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  #make-picks-main .matchup img {
+    display: unset;
+    height: 46px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    top: 0px;
+  }
+  #make-picks-main .team {
+    display: none;
+  }
+  #make-picks-main .matchups {
+    padding-top: 12px;
+  }
+  #make-picks-main .matchup {
+    margin-top: 0px;
+    margin-bottom: 4px;
+  }
+  #make-picks-main .versus {
+    margin-bottom: 0px;
+    position: relative;
+    bottom: 15px;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  #make-picks-main .col-3 {
+    width: 50%;
+  }
+  #make-picks-main .col-9 {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #make-picks-main .form-area h1 {
+    font-size: 24pt;
+  }
+  #make-picks-main .matchups {
+    padding-top: 6px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  #make-picks-main .versus {
+    margin-right: 2px;
+    margin-left: 2px;
+  }
 }

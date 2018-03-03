@@ -17,11 +17,11 @@ export class MakePicksMain extends React.Component {
     const matchups = this.props.matchupData.map((matchup, index) => {
       return (
         <div className="matchup" key={index}>
-          <h3 className="matchup-sentence">{matchup[0]}</h3>
+          <h3 className="matchup-sentence team">{matchup[0]}</h3>
           <img className="matchup-sentence" src={matchup[2]} alt="" />
-          <h3 className="matchup-sentence">vs.</h3>
+          <h3 className="matchup-sentence versus">vs.</h3>
           <img className="matchup-sentence" src={matchup[3]} alt="" />
-          <h3 className="matchup-sentence">{matchup[1]}</h3>
+          <h3 className="matchup-sentence team">{matchup[1]}</h3>
         </div>
       )
     });
@@ -37,7 +37,7 @@ export class MakePicksMain extends React.Component {
       )
     });
     return (
-      <div id="make-picks-form" className="picks-form-background">
+      <div id="make-picks-main" className="picks-form-background">
         <div className="row">
           <div className="picks-form-section">
             <div className="main-area col-12">
