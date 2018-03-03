@@ -70,4 +70,7 @@ select::-ms-expand {
   select {
     font-size: 12pt;
   }
+  .select::after {
+    padding: 0 12px;
+  }
 }
