@@ -1,4 +1,4 @@
-.leaderboard-background {
+#leaderboard-main {
   background-image: url('https://images.unsplash.com/photo-1431324003833-a7d76ef5770b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2bf164853bd15799731c8a1b5cafe931&auto=format&fit=crop&w=1350&q=80');
   background-size: cover;
   width: 100%;
@@ -66,11 +66,11 @@
   #leaderboard-main .entry-name h2 {
     margin-left: 30px;
   }
-  #leaderboard-main .entry h3 {
-    margin-left: 20px;
-  }
   #leaderboard-main .rank h3 {
     margin-left: 5px;
+  }
+  #leaderboard-main .entry h3 {
+    margin-left: 20px;
   }
 }
 
@@ -78,14 +78,14 @@
   #leaderboard-main .entry-name h2 {
     margin-left: 20px;
   }
-  #leaderboard-main .entry h3 {
-    margin-left: 15px;
+  #leaderboard-main .username h2 {
+    margin-left: 0px;
   }
   #leaderboard-main .rank h3 {
     margin-left: 5px;
   }
-  #leaderboard-main .username h2 {
-    margin-left: 0px;
+  #leaderboard-main .entry h3 {
+    margin-left: 15px;
   }
   #leaderboard-main .user h3 {
     margin-left: 0px;
@@ -102,11 +102,11 @@
   #leaderboard-main .entry-name h2 {
     margin-left: 15px;
   }
-  #leaderboard-main .entry h3 {
-    margin-left: 15px;
-  }
   #leaderboard-main .rank h3 {
     margin-left: 10px;
+  }
+  #leaderboard-main .entry h3 {
+    margin-left: 15px;
   }
 }
 
@@ -114,11 +114,11 @@
   #leaderboard-main .entry-name h2 {
     margin-left: 27px;
   }
-  #leaderboard-main .entry h3 {
-    margin-left: 25px;
-  }
   #leaderboard-main .username h2 {
     margin-left: 20px;
+  }
+  #leaderboard-main .entry h3 {
+    margin-left: 25px;
   }
   #leaderboard-main .user h3 {
     margin-left: 20px;
@@ -147,11 +147,11 @@
   #leaderboard-main .entry-name h2 {
     margin-left: 16px;
   }
-  #leaderboard-main .entry h3 {
-    margin-left: 16px;
-  }
   #leaderboard-main .username h2 {
     margin-left: 0px;
+  }
+  #leaderboard-main .entry h3 {
+    margin-left: 16px;
   }
   #leaderboard-main .user h3 {
     margin-left: 0px;
@@ -159,12 +159,6 @@
 }
 
 @media only screen and (max-width: 420px) {
-  #leaderboard-main .rankings .user {
-    display: none;
-  }
-  #leaderboard-main .titles .username {
-    display: none;
-  }
   #leaderboard-main .col-1 {
     width: 15%;
   }
@@ -177,10 +171,16 @@
   #leaderboard-main .entry-name h2 {
     margin-left: 0px;
   }
-  #leaderboard-main .entry h3 {
-    margin-left: 0px;
+  #leaderboard-main .username {
+    display: none;
   }
   #leaderboard-main .rank h3 {
     margin-left: 0px;
+  }
+  #leaderboard-main .entry h3 {
+    margin-left: 0px;
+  }
+  #leaderboard-main .user {
+    display: none;
   }
 }

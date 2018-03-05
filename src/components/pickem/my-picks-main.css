@@ -1,4 +1,4 @@
-.my-picks-background {
+#my-picks-main {
   background-image: url('https://images.unsplash.com/photo-1431324003833-a7d76ef5770b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2bf164853bd15799731c8a1b5cafe931&auto=format&fit=crop&w=1350&q=80');
   background-size: cover;
   width: 100%;
@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
 }
 
-#my-picks-main .form-area {
+#my-picks-main .main-area {
   margin-top: 120px;
   background-color: rgb(247, 247, 247);
   padding-bottom: 40px;
@@ -14,7 +14,7 @@
   margin-bottom: 50px;
 }
 
-#my-picks-main .form-area h1 {
+#my-picks-main .main-area h1 {
   font-family: 'Bree serif', serif;
   font-size: 32pt;
   text-align: center;
@@ -69,16 +69,16 @@
 }
 
 @media only screen and (max-width: 870px) {
-  #my-picks-main .matchup img {
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 50px;
-  }
   #my-picks-main .col-3 {
     width: 30%;
   }
   #my-picks-main .col-9 {
     width: 70%;
+  }
+  #my-picks-main .matchup img {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 50px;
   }
 }
 
@@ -127,13 +127,13 @@
   #my-picks-main .matchup {
     margin-top: 17px;
   }
-  #my-picks-main .matchup img {
-    display: none;
-  }
   #my-picks-main .matchup-sentence {
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 8px;
+  }
+  #my-picks-main .matchup img {
+    display: none;
   }
 }
 
@@ -158,15 +158,11 @@
 }
 
 @media only screen and (max-width: 520px) {
-  #my-picks-main .matchup img {
-    display: unset;
-    height: 46px;
-    margin-top: 0px;
-    margin-bottom: 2px;
-    top: 0px;
+  #my-picks-main .col-3 {
+    width: 50%;
   }
-  #my-picks-main .team {
-    display: none;
+  #my-picks-main .col-9 {
+    width: 50%;
   }
   #my-picks-main .matchups {
     padding-top: 12px;
@@ -174,6 +170,16 @@
   #my-picks-main .matchup {
     margin-top: 0px;
     margin-bottom: 4px;
+  }
+  #my-picks-main .team {
+    display: none;
+  }
+  #my-picks-main .matchup img {
+    display: unset;
+    height: 46px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    top: 0px;
   }
   #my-picks-main .versus {
     margin-bottom: 0px;
@@ -183,16 +189,10 @@
     margin-right: 10px;
     margin-left: 10px;
   }
-  #my-picks-main .col-3 {
-    width: 50%;
-  }
-  #my-picks-main .col-9 {
-    width: 50%;
-  }
 }
 
 @media only screen and (max-width: 450px) {
-  #my-picks-main .form-area h1 {
+  #my-picks-main .main-area h1 {
     font-size: 24pt;
   }
   #my-picks-main .matchups {

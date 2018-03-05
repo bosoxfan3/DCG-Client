@@ -38,25 +38,23 @@ export class MakePicksMain extends React.Component {
       );
     });
     return (
-      <div id="make-picks-main" className="picks-form-background">
+      <div id="make-picks-main">
         <div className="row">
-          <div className="picks-form-section">
-            <div className="main-area col-12">
-              <h1>Week 17</h1>
-              <section className="col-3">
-                <form
-                  onSubmit={this.props.handleSubmit(values => 
-                    this.onSubmit(values)
-                  )}>
-                  {matchupSelects}
-                  <div className="button-div">
-                    <button className="submit-button" type="submit">Submit</button>
-                  </div>
-                </form>
-              </section>
-              <div className="matchups col-9">
-                {matchups}
-              </div>
+          <div className="main-area col-12">
+            <h1>Week 17</h1>
+            <section className="col-3">
+              <form
+                onSubmit={this.props.handleSubmit(values => 
+                  this.onSubmit(values)
+                )}>
+                {matchupSelects}
+                <div className="button-div">
+                  <button className="submit-button" type="submit">Submit</button>
+                </div>
+              </form>
+            </section>
+            <div className="matchups col-9">
+              {matchups}
             </div>
           </div>
         </div>

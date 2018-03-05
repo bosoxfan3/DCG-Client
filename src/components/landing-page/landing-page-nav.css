@@ -7,15 +7,6 @@
   z-index: 1000;
 }
 
-.landing-page-nav .login-signup-links {
-  float: right;
-  position: relative;
-  top: 14px;
-  padding-right: 5px;
-  font-family: 'Bree serif', serif;
-  font-size: 16pt;
-}
-
 .landing-page-nav .app-title {
   display: inline-block;
   margin: 7px 0 10px 5px;
@@ -30,6 +21,15 @@
   position: relative;
   left: 4px;
   top: 2px;
+}
+
+.landing-page-nav .login-signup-links {
+  float: right;
+  position: relative;
+  top: 14px;
+  padding-right: 5px;
+  font-family: 'Bree serif', serif;
+  font-size: 16pt;
 }
 
 .landing-page-nav .login-link {

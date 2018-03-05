@@ -49,28 +49,26 @@ export class MyPicksMain extends React.Component {
       );
     });
     return (
-      <div id="my-picks-main" className="my-picks-background">
+      <div id="my-picks-main">
         <div className="row">
-          <div className="my-picks-section">
-            <div className="form-area col-12">
-              <h1>Week 17</h1>
-              <section className="col-3">
-                <form
-                  onSubmit={this.props.handleSubmit(values => 
-                    this.onSubmit(values)
-                  )}>
-                  {matchupSelects}
-                  <div className="button-div">
-                    <button type="submit">Submit Changes</button>
-                  </div>
-                </form>
+          <div className="main-area col-12">
+            <h1>Week 17</h1>
+            <section className="col-3">
+              <form
+                onSubmit={this.props.handleSubmit(values => 
+                  this.onSubmit(values)
+                )}>
+                {matchupSelects}
                 <div className="button-div">
-                  <button className="stop-editing-button" onClick={() => this.resetPicks()}>Reset Changes</button>
+                  <button type="submit">Submit Changes</button>
                 </div>
-              </section>
-              <div className="matchups col-9">
-                {matchups}
+              </form>
+              <div className="button-div">
+                <button className="stop-editing-button" onClick={() => this.resetPicks()}>Reset Changes</button>
               </div>
+            </section>
+            <div className="matchups col-9">
+              {matchups}
             </div>
           </div>
         </div>

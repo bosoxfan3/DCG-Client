@@ -5,7 +5,23 @@ import './leaderboard-main.css';
 
 export class LeaderboardMain extends React.Component {
   render() {
-    const allUsers = this.props.allUsers.map((user, index) => {
+    const titles = (
+      <div className="titles">
+        <div className="col-1">
+          <h2>Rank</h2>
+        </div>
+        <div className="entry-name col-4">
+          <h2>Entry Name</h2>
+        </div>
+        <div className="username col-4">
+          <h2>Username</h2>
+        </div>
+        <div className="col-3">
+          <h2>Points</h2>
+        </div>
+      </div>
+    );
+    const rankings = this.props.allUsers.map((user, index) => {
       return (
         <div className="rankings" key={index}>
           <div className="rank col-1">
@@ -23,31 +39,13 @@ export class LeaderboardMain extends React.Component {
         </div>
       )
     });
-    const titles = (
-      <div className="titles">
-        <div className="col-1">
-          <h2>Rank</h2>
-        </div>
-        <div className="entry-name col-4">
-          <h2>Entry Name</h2>
-        </div>
-        <div className="username col-4">
-          <h2>Username</h2>
-        </div>
-        <div className="col-3">
-          <h2>Points</h2>
-        </div>
-      </div>
-    );
     return (
-      <div id="leaderboard-main" className="leaderboard-background">
+      <div id="leaderboard-main">
         <div className="row">
-          <div className="leaderboard-section">
-            <div className="leaderboard-area col-12">
-              <h1>Leaderboard</h1>
-              {titles}
-              {allUsers}
-            </div>
+          <div className="leaderboard-area col-12">
+            <h1>Leaderboard</h1>
+            {titles}
+            {rankings}
           </div>
         </div>
       </div>
