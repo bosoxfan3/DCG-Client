@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, reduxForm, focus } from 'redux-form';
 
 import { registerUser } from '../actions/signup';
-import { login, toggleSignupForm } from '../actions/login';
+import { login, toggleSignupForm } from '../actions/auth';
 import { required, nonEmpty, matches, length, isTrimmed } from '../validators';
 import Input from './input';
 
@@ -31,7 +31,7 @@ export class SignupForm extends React.Component {
             type="text" 
             name="name" 
             placeholder="NiNErZ 4eVeR"
-            validate={[required, nonEmpty, length({max: 40})]}
+            validate={[required, nonEmpty, length({max: 17})]}
           />
           <label htmlFor="username">Username</label>
           <Field
@@ -39,7 +39,7 @@ export class SignupForm extends React.Component {
             type="text"
             name="username"
             placeholder="bob92"
-            validate={[required, nonEmpty, isTrimmed]}
+            validate={[required, nonEmpty, isTrimmed, length({max: 17})]}
           />
           <label htmlFor="password">Password</label>
           <Field

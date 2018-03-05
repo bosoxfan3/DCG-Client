@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { toggleLoginForm, toggleSignupForm } from '../actions/login';
+import { toggleLoginForm, toggleSignupForm } from '../actions/auth';
 
 import './landing-page-nav.css';
 

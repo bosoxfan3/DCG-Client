@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 
 import UserNav from './user-nav';
 import MakePicksMain from './make-picks-main';
-import { getUser, getAllUsers } from '../actions/picks';
+import { getUser, getAllUsers } from '../actions/users';
 
 import { fetchMatchupData } from '../actions/matchups';
 

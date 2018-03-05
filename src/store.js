@@ -6,7 +6,7 @@ import { loadAuthToken } from './local-storage';
 import authReducer from './reducers/auth';
 import matchupsReducer from './reducers/matchups';
 import usersReducer from './reducers/users';
-import { setAuthToken } from './actions/login';
+import { setAuthToken } from './actions/auth';
 
 const store = createStore(
   combineReducers({

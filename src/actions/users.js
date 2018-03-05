@@ -49,25 +49,6 @@ export const updateScoresError = error => ({
   error
 });
 
-export const updateScores = () => (dispatch, getState) => {
-  const authToken = getState().auth.authToken;
-  return fetch(`${API_BASE_URL}/users/scores`, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${authToken}`,
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: {}
-  })
-  .then(res => normalizeResponseErrors(res))
-  .then(res => res.json())
-  .then(data => dispatch(updateScoresSuccess(data)))
-  .catch(err => {
-    dispatch(updateScoresError(err));
-  });
-};
-
 export const getUser = () => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
   const username = getState().auth.currentUser.username;
@@ -118,5 +99,21 @@ export const makePicks = values => (dispatch, getState) => {
   .then((data) => dispatch(makePicksSuccess(data)))
   .catch(err => {
     dispatch(makePicksError(err));
+  });
+};
+
+export const updateScores = () => (dispatch, getState) => {
+  const authToken = getState().auth.authToken;
+  return fetch(`${API_BASE_URL}/users/scores`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${authToken}`
+    }
+  })
+  .then(res => normalizeResponseErrors(res))
+  .then(res => res.json())
+  .then(data => dispatch(updateScoresSuccess(data)))
+  .catch(err => {
+    dispatch(updateScoresError(err));
   });
 };

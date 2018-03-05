@@ -4,8 +4,8 @@ import { Redirect } from 'react-router-dom';
 import UserNav from './user-nav';
 import LeaderboardMain from './leaderboard-main';
 
-import { getUser, getAllUsers } from '../actions/picks';
-import { updateScores } from '../actions/picks';
+import { getUser, getAllUsers } from '../actions/users';
+import { updateScores } from '../actions/users';
 
 export class LeaderboardPage extends React.Component {
   componentDidMount() {

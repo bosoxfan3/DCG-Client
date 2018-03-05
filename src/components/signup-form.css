@@ -3,14 +3,10 @@
 }
 
 .signup-form h3 {
-  /* font-family: 'Oswald', sans-serif; */
-  /* font-family: 'Krona One', sans-serif; */
   font-family: 'Bree serif', serif;
 }
 
 .signup-form label, .signup-form button, .signup-form .form-error {
-  /* font-family: 'Slabo 27px', serif; */
-  /* font-family: 'Krona One', sans-serif; */
   font-family: 'Bree serif', serif;
   font-size: 12pt;
 }

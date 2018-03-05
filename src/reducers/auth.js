@@ -3,7 +3,7 @@ import {
   SET_CURRENT_USER,
   TOGGLE_LOGIN_FORM,
   TOGGLE_SIGNUP_FORM 
-} from '../actions/login';
+} from '../actions/auth';
 
 const initialState = {
   authToken: null,

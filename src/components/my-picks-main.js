@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, change, Field } from 'redux-form';
 
-import { makePicks } from '../actions/picks';
+import { makePicks } from '../actions/users';
 import { required } from '../validators';
 import Select from './select';
 

@@ -4,7 +4,7 @@ import { reduxForm, Field } from 'redux-form';
 
 import Select from './select';
 import { required } from '../validators';
-import { makePicks } from '../actions/picks';
+import { makePicks } from '../actions/users';
 
 import './make-picks-main.css';
 

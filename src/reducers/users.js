@@ -7,7 +7,7 @@ import {
   MAKE_PICKS_ERROR,
   UPDATE_SCORES_SUCCESS,
   UPDATE_SCORES_ERROR
-} from '../actions/picks';
+} from '../actions/users';
 
 const initialState = {
   user: null,
