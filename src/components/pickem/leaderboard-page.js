@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+
 import UserNav from './user-nav';
 import LeaderboardMain from './leaderboard-main';
 
-import { getUser, getAllUsers } from '../actions/users';
-import { updateScores } from '../actions/users';
+import { getUser, getAllUsers } from '../../actions/users';
+import { updateScores } from '../../actions/users';
 
 export class LeaderboardPage extends React.Component {
   componentDidMount() {
@@ -19,8 +20,6 @@ export class LeaderboardPage extends React.Component {
     this.props.dispatch(updateScores())
   }
   render() {
-    console.log(this.props.user);
-    console.log(this.props.allUsers);
     if (!this.props.loggedIn) {
       return <Redirect to="/" />;
     }

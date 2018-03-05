@@ -2,9 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
 
-import Select from './select';
-import { required } from '../validators';
-import { makePicks } from '../actions/users';
+import Select from '../form-components/select';
+
+import { required } from '../../validators';
+import { makePicks } from '../../actions/users';
 
 import './make-picks-main.css';
 
@@ -23,7 +24,7 @@ export class MakePicksMain extends React.Component {
           <img className="matchup-sentence" src={matchup[3]} alt="" />
           <h3 className="matchup-sentence team">{matchup[1]}</h3>
         </div>
-      )
+      );
     });
     const matchupSelects = this.props.matchupData.map((matchup, index) => {
       return (
@@ -34,7 +35,7 @@ export class MakePicksMain extends React.Component {
           options={[matchup[0], matchup[1]]}
           validate={required}
         />
-      )
+      );
     });
     return (
       <div id="make-picks-main" className="picks-form-background">

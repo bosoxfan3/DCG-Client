@@ -2,12 +2,12 @@ import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import LandingPage from './landing-page';
-import LeaderboardPage from './leaderboard-page';
-import MyPicksPage from './my-picks-page';
-import MakePicksPage from './make-picks-page';
+import LandingPage from './landing-page/landing-page';
+import LeaderboardPage from './pickem/leaderboard-page';
+import MyPicksPage from './pickem/my-picks-page';
+import MakePicksPage from './pickem/make-picks-page';
 
-import { refreshAuthToken } from '../actions/login';
+import { refreshAuthToken } from '../actions/auth';
 
 export class App extends React.Component {
   componentDidMount() {

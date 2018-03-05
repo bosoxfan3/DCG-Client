@@ -38,7 +38,7 @@ export class LeaderboardMain extends React.Component {
           <h2>Points</h2>
         </div>
       </div>
-    )
+    );
     return (
       <div id="leaderboard-main" className="leaderboard-background">
         <div className="row">

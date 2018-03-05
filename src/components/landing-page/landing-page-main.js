@@ -29,7 +29,7 @@ export function LandingPageMain() {
               Choose who you think will win each matchup. Be sure to make all your selections before
               the first game of the week!
             </p>
-            <img className="picks-form-screenshot" src={require("../screenshots/MakePicks.png")} alt="picks form screenshot" />
+            <img className="picks-form-screenshot" src={require("../../screenshots/MakePicks.png")} alt="picks form screenshot" />
           </div>
           <div className="rules col-6">
             <h3>...and Climb the Leaderboard</h3>
@@ -37,7 +37,7 @@ export function LandingPageMain() {
               Each and every correct pick earns a point. See how your predictions stack up against 
               the competition over the course of the season!
             </p>
-            <img className="leaderboard-screenshot" src={require("../screenshots/Leaderboard.png")} alt="leaderboard screenshot" />
+            <img className="leaderboard-screenshot" src={require("../../screenshots/Leaderboard.png")} alt="leaderboard screenshot" />
           </div>
         </div>
       </div>
