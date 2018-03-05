@@ -3,8 +3,8 @@ Pick 16
 
 Table of Contents
 -----------------
-1. [Purpose](https://github.com/bosoxfan3/Pick-16#purpose)
-2. [Screenshots](https://github.com/bosoxfan3/Pick-16#screenshots)
+1. [Purpose](https://github.com/bosoxfan3/Pick_16#purpose)
+2. [Screenshots](https://github.com/bosoxfan3/Pick_16#screenshots)
 3. [Getting Started](https://github.com/bosoxfan3/Pick-16#getting-started)
 4. [Technologies Used](https://github.com/bosoxfan3/Pick-16#technologies-used)
 
