@@ -3,10 +3,10 @@ Pick 16
 
 Table of Contents
 -----------------
-1. [Purpose](https://github.com/bosoxfan3/Pick_16#purpose)
-2. [Screenshots](https://github.com/bosoxfan3/Pick_16#screenshots)
-3. [Getting Started](https://github.com/bosoxfan3/Pick-16#getting-started)
-4. [Technologies Used](https://github.com/bosoxfan3/Pick-16#technologies-used)
+1. [Purpose](https://github.com/bosoxfan3/Pick16-Client#purpose)
+2. [Screenshots](https://github.com/bosoxfan3/Pick16-Client#screenshots)
+3. [Getting Started](https://github.com/bosoxfan3/Pick16-Client#getting-started)
+4. [Technologies Used](https://github.com/bosoxfan3/Pick16-Client#technologies-used)
 
 Purpose
 -------
@@ -21,7 +21,7 @@ Pick 16 was created after years of playing this game by getting player's weekly 
 
 Screenshots
 -----------
-**Landing Page:** Users can learn about Pick 16, sign up, log in, or test it out with a demo account.
+**Landing Page:** Users can learn about Pick 16, sign up, log in, or test it out with a demo account (Demo account link at bottom of signup form).
 ![Landing Page](/src/screenshots/LandingPage.png)
 
 **Leaderboard:** Users can see where their point total puts them in the standings of all the users.
@@ -30,7 +30,7 @@ Screenshots
 **Make Picks Page:** This page displays the current week of the season and all the matchups for that week. All picks must be made before the form can be submitted.
 ![Make Picks Page](/src/screenshots/MakePicks.png)
 
-**My Picks Page:** Here users can see all of their current picks. They can edit the picks and submit the updates, or if they dislike any edits they've made, reset the picks
+**My Picks Page:** Here users can see all of their current picks. They can edit the picks and submit the updates; or if they dislike any edits they've made, reset the picks
 to what they were when the page loaded.
 ![My Picks Page](/src/screenshots/MyPicks.png)
 
@@ -47,7 +47,8 @@ Getting Started
 >   npm start
 ```
 Then open [`localhost:3000`](http://localhost:3000) in a browser.
-**You will need to either sign up, log in, or use the demo account to access the main functions of Pick 16**
+**You will need to either sign up, log in, or use the demo link to access the main functions of Pick 16**
+
 ###Testing
 ```
 >   npm test
@@ -72,7 +73,7 @@ Developers will need to install MongoDB for full functionality.
   * MongoDB
   * Mocha and Chai - used for testing
   * Travis CI - used for continuous integration and deployment
-    -Pick16-API is deployed to Heroku
+  * Heroku - where the Pick 16 API is deployed
 
 ### Security
   * Bcrypt.js - used to encrypt user passwords
