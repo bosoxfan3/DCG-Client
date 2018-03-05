@@ -13,6 +13,9 @@ export class LoginForm extends React.Component {
     this.props.dispatch(login(values.username, values.password));
     this.props.dispatch(toggleLoginForm());
   }
+  logInDemoAccount() {
+    return this.props.dispatch(login('daniel', '12345'));
+  }
   render() {
     let error;
     if (this.props.error) {
@@ -49,6 +52,7 @@ export class LoginForm extends React.Component {
         <button className="login-button" disabled={this.props.pristine || this.props.submitting}>
           Log In
         </button>
+        <a className="demo-link" onClick={() => this.logInDemoAccount()}>Use Demo Account</a>
       </form>
     );
   }

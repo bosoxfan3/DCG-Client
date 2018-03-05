@@ -29,5 +29,21 @@
   width: 80%;
   color: white;
   background-color: rgb(10, 115, 141);
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.signup-form .signup-button:hover {
+  cursor: pointer;
+}
+
+.signup-form .demo-link {
+  display: block;
+  margin-bottom: 15px;
+  font-family: 'Bree serif', serif;
+  font-size: 11pt;
+  text-decoration: underline;
+}
+
+.signup-form .demo-link:hover {
+  cursor: pointer;
 }

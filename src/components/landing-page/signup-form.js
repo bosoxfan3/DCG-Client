@@ -18,6 +18,9 @@ export class SignupForm extends React.Component {
       .then(() => this.props.dispatch(login(username, password)))
       .then(() => this.props.dispatch(toggleSignupForm()));
   }
+  logInDemoAccount() {
+    return this.props.dispatch(login('daniel', '12345'));
+  }
   render() {
     return (
       <form
@@ -62,6 +65,7 @@ export class SignupForm extends React.Component {
           disabled={this.props.pristine || this.props.submitting}>
           Sign Up
         </button>
+        <a className="demo-link" onClick={() => this.logInDemoAccount()}>Use Demo Account</a>
       </form>
     );
   }

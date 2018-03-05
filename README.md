@@ -21,7 +21,7 @@ Pick 16 was created after years of playing this game by getting player's weekly 
 
 Screenshots
 -----------
-**Landing Page:** Users can learn about Pick 16, sign up, log in, or test it out with a demo account (Demo account link at bottom of signup form).
+**Landing Page:** Users can learn about Pick 16, sign up, log in, or test it out with a demo account (Demo account link at bottom of signup and login forms).
 ![Landing Page](/src/screenshots/LandingPage.png)
 
 **Leaderboard:** Users can see where their point total puts them in the standings of all the users.
