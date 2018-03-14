@@ -5,6 +5,9 @@ import './leaderboard-main.css';
 
 export class LeaderboardMain extends React.Component {
   render() {
+    if (!this.props.allUsers) {
+      return <div></div>;
+    }
     const titles = (
       <div className="titles">
         <div className="col-1">

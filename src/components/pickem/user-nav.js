@@ -20,7 +20,6 @@ export class UserNav extends React.Component {
           <div className="site-links">
             <Link className="site-link" to="/leaderboard">Leaderboard</Link>
             <Link className="site-link" to="/my-picks">My Picks</Link>
-            <Link className="site-link" to="/make-picks">Make Picks</Link>
           </div>
           <a className="log-out-button" onClick={() => this.logOut()}>Log Out</a>
         </nav>

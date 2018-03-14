@@ -14,7 +14,8 @@ export class LoginForm extends React.Component {
     this.props.dispatch(toggleLoginForm());
   }
   logInDemoAccount() {
-    return this.props.dispatch(login('daniel', '12345'));
+    this.props.dispatch(login('daniel', '12345'));
+    this.props.dispatch(toggleLoginForm());
   }
   render() {
     let error;

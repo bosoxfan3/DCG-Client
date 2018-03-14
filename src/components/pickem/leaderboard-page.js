@@ -5,16 +5,17 @@ import { Redirect } from 'react-router-dom';
 import UserNav from './user-nav';
 import LeaderboardMain from './leaderboard-main';
 
-import { getUser, getAllUsers } from '../../actions/users';
-import { updateScores } from '../../actions/users';
+import { getUser, getAllUsers, updateScores } from '../../actions/users';
+import { fetchMatchupData } from '../../actions/matchups';
 
 export class LeaderboardPage extends React.Component {
   componentDidMount() {
     if (!this.props.loggedIn) {
       return;
     }
-    this.props.dispatch(getUser());
     this.props.dispatch(getAllUsers());
+    this.props.dispatch(getUser());
+    this.props.dispatch(fetchMatchupData());
   }
   submitAllPicks() {
     this.props.dispatch(updateScores())
@@ -35,10 +36,7 @@ export class LeaderboardPage extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  loggedIn: state.auth.currentUser !== null,
-  currentUser: state.auth.currentUser,
-  user: state.users.user,
-  allUsers: state.users.allUsers
+  loggedIn: state.auth.currentUser !== null
 });
 
 export default connect(mapStateToProps)(LeaderboardPage);

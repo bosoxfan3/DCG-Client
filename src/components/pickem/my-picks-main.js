@@ -10,14 +10,14 @@ import { required } from '../../validators';
 import './my-picks-main.css';
 
 export class MyPicksMain extends React.Component {
+  componentDidMount() {
+    this.setDefaults();
+  }
   onSubmit(values) {
     this.props.dispatch(makePicks(values));
     this.props.history.push('/leaderboard');
   }
   resetPicks() {
-    this.setDefaults();
-  }
-  componentDidMount() {
     this.setDefaults();
   }
   setDefaults() {
