@@ -27,11 +27,8 @@ Screenshots
 **Leaderboard:** Users can see where their point total puts them in the standings of all the users.
 ![Leaderboard](/src/screenshots/Leaderboard.png)
 
-**Make Picks Page:** This page displays the current week of the season and all the matchups for that week. All picks must be made before the form can be submitted.
-![Make Picks Page](/src/screenshots/MakePicks.png)
-
-**My Picks Page:** Here users can see all of their current picks. They can edit the picks and submit the updates; or if they dislike any edits they've made, reset the picks
-to what they were when the page loaded.
+**My Picks Page:** This page displays the current week of the season and all the matchups for that week. 
+Here users can see all of their current picks or make picks if they have no current picks. They can edit the picks and submit the updates; or if they dislike any edits they've made, reset the picks to what they were when the page loaded.
 ![My Picks Page](/src/screenshots/MyPicks.png)
 
 Getting Started
