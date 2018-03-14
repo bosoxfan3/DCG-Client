@@ -1,6 +1,6 @@
 {
   "name": "pick16-client",
-  "version": "0.1.0",
+  "version": "0.25.0",
   "private": true,
   "dependencies": {
     "base64-js": "^1.2.1",

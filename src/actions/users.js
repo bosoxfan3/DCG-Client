@@ -19,34 +19,16 @@ export const getAllUsersSuccess = data => ({
   data
 });
 
-export const GET_ALL_USERS_ERROR = 'GET_ALL_USERS_ERROR';
-export const getAllUsersError = error => ({
-  type: GET_ALL_USERS_ERROR,
-  error
-});
-
 export const MAKE_PICKS_SUCCESS = 'MAKE_PICKS_SUCCESS';
 export const makePicksSuccess = data => ({
   type: MAKE_PICKS_SUCCESS,
   data
 });
 
-export const MAKE_PICKS_ERROR = 'MAKE_PICKS_ERROR';
-export const makePicksError = error => ({
-  type: MAKE_PICKS_ERROR,
-  error
-});
-
 export const UPDATE_SCORES_SUCCESS = 'UPDATE_SCORES_SUCCESS';
 export const updateScoresSuccess = data => ({
   type: UPDATE_SCORES_SUCCESS,
   data
-});
-
-export const UPDATE_SCORES_ERROR = 'UPDATE_SCORES_ERROR';
-export const updateScoresError = error => ({
-  type: UPDATE_SCORES_ERROR,
-  error
 });
 
 export const getUser = () => (dispatch, getState) => {
@@ -78,7 +60,7 @@ export const getAllUsers = () => (dispatch, getState) => {
   .then(res => res.json())
   .then((data) => dispatch(getAllUsersSuccess(data)))
   .catch(err => {
-    dispatch(getAllUsersError(err));
+    dispatch(getUserError(err));
   });
 };
 
@@ -98,7 +80,7 @@ export const makePicks = values => (dispatch, getState) => {
   .then(res => res.json())
   .then((data) => dispatch(makePicksSuccess(data)))
   .catch(err => {
-    dispatch(makePicksError(err));
+    dispatch(getUserError(err));
   });
 };
 
@@ -114,6 +96,6 @@ export const updateScores = () => (dispatch, getState) => {
   .then(res => res.json())
   .then(data => dispatch(updateScoresSuccess(data)))
   .catch(err => {
-    dispatch(updateScoresError(err));
+    dispatch(getUserError(err));
   });
 };

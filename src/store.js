@@ -3,10 +3,10 @@ import { reducer as formReducer } from 'redux-form';
 import thunk from 'redux-thunk';
 
 import { loadAuthToken } from './local-storage';
+import { setAuthToken } from './actions/auth';
 import authReducer from './reducers/auth';
 import matchupsReducer from './reducers/matchups';
 import usersReducer from './reducers/users';
-import { setAuthToken } from './actions/auth';
 
 const store = createStore(
   combineReducers({

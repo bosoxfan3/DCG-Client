@@ -11,7 +11,7 @@ import './signup-form.css';
 
 export class SignupForm extends React.Component {
   onSubmit(values) {
-    const {username, password, name } = values;
+    const {username, password, name} = values;
     const user = {username, password, name};
     return this.props
       .dispatch(registerUser(user))

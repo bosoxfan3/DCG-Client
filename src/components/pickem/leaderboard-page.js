@@ -28,6 +28,7 @@ export class LeaderboardPage extends React.Component {
         <UserNav />
         <LeaderboardMain />
         <button hidden type="button" onClick={() => this.submitAllPicks()}>Get Scores</button>
+        {/* the button is hidden so that only the administrator can update the scores */}
       </div>
     );
   }
