@@ -1,6 +1,7 @@
 {
   "name": "pick16-client",
   "version": "0.25.0",
+  "description": "NFL pick'em game",
   "private": true,
   "dependencies": {
     "base64-js": "^1.2.1",
@@ -25,5 +26,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bosoxfan3/Pick16-Client"
+  },
+  "author": "Daniel Acquesta danielacquesta@sbcglobal.net"
 }
