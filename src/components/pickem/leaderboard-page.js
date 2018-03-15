@@ -17,8 +17,8 @@ export class LeaderboardPage extends React.Component {
     this.props.dispatch(getUser());
     this.props.dispatch(fetchMatchupData());
   }
-  submitAllPicks() {
-    this.props.dispatch(updateScores())
+  updateScores() {
+    this.props.dispatch(updateScores());
   }
   render() {
     if (!this.props.loggedIn) {
@@ -28,8 +28,8 @@ export class LeaderboardPage extends React.Component {
       <div>
         <UserNav />
         <LeaderboardMain />
-        <button hidden type="button" onClick={() => this.submitAllPicks()}>Get Scores</button>
-        {/* the button is hidden so that only the administrator can update the scores */}
+        <button hidden type="button" onClick={() => this.updateScores()}>Update Scores</button>
+        {/* the buttons are hidden so that only the administrator can update the scores */}
       </div>
     );
   }

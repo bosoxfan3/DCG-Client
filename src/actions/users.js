@@ -68,7 +68,7 @@ export const makePicks = values => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
   const username = getState().auth.currentUser.username;
   return fetch(`${API_BASE_URL}/users/picks/${username}`, {
-    method: 'POST',
+    method: 'PUT',
     headers: {
       Authorization: `Bearer ${authToken}`,
       'Accept': 'application/json',

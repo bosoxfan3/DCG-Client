@@ -5,7 +5,6 @@ import { reduxForm, change, Field } from 'redux-form';
 import Select from '../form-components/select';
 
 import { makePicks } from '../../actions/users';
-import { required } from '../../validators';
 
 import './my-picks-main.css';
 
@@ -44,7 +43,6 @@ export class MyPicksMain extends React.Component {
           name={`matchup${index}`}
           key={`matchup${index}`}
           options={[matchup[0], matchup[1]]}
-          validate={required}
         />
       );
     });
