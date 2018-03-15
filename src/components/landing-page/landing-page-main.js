@@ -29,7 +29,7 @@ export function LandingPageMain() {
               Choose who you think will win each matchup. Be sure to make all your selections before
               the first game of the week!
             </p>
-            <img className="picks-form-screenshot" src={require("../../screenshots/MyPicks.png")} alt="picks form screenshot" />
+            <img className="picks-form-screenshot" src={require("../../screenshots/MakingPicks.png")} alt="picks form screenshot" />
           </div>
           <div className="rules col-6">
             <h3>...and Climb the Leaderboard</h3>
