@@ -13,6 +13,7 @@ export class MyPicksMain extends React.Component {
     this.setDefaults();
   }
   onSubmit(values) {
+    console.log(values);
     this.props.dispatch(makePicks(values));
     this.props.history.push('/leaderboard');
   }
