@@ -17,7 +17,9 @@ export class MyPicksMain extends React.Component {
     this.props.history.push('/leaderboard');
   }
   resetPicks() {
-    this.setDefaults();
+    for (let i=0; i<this.props.matchupData.length; i++) {
+      this.props.dispatch(change('edit-picks', `matchup${i}`, ''));
+    }
   }
   setDefaults() {
     for (let i=0; i<this.props.matchupData.length; i++) {
