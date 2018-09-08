@@ -67,7 +67,7 @@ export const getAllUsers = () => (dispatch, getState) => {
 export const makePicks = values => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
   const username = getState().auth.currentUser.username;
-  return fetch(`${API_BASE_URL}/users/picks/${username}`, {
+  return fetch(`${API_BASE_URL}/picks/${username}`, {
     method: 'PUT',
     headers: {
       Authorization: `Bearer ${authToken}`,
@@ -86,7 +86,7 @@ export const makePicks = values => (dispatch, getState) => {
 
 export const updateScores = () => (dispatch, getState) => {
   const authToken = getState().auth.authToken;
-  return fetch(`${API_BASE_URL}/users/scores`, {
+  return fetch(`${API_BASE_URL}/scores`, {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${authToken}`

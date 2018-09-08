@@ -31,7 +31,7 @@ export class MyPicksMain extends React.Component {
         <div className="matchup" key={index}>
           <h3 className="matchup-sentence team">{matchup[0]}</h3>
           <img className="matchup-sentence" src={matchup[2]} alt="" />
-          <h3 className="matchup-sentence versus">@</h3>
+          <h3 className="matchup-sentence versus">at</h3>
           <img className="matchup-sentence" src={matchup[3]} alt="" />
           <h3 className="matchup-sentence team">{matchup[1]}</h3>
         </div>
