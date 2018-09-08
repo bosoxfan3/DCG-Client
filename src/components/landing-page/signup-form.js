@@ -19,7 +19,7 @@ export class SignupForm extends React.Component {
       .then(() => this.props.dispatch(toggleSignupForm()));
   }
   logInDemoAccount() {
-    this.props.dispatch(login('daniel', '12345'));
+    this.props.dispatch(login('demo', '12345'));
     this.props.dispatch(toggleSignupForm());
   }
   render() {
