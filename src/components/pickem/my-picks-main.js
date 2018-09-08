@@ -13,7 +13,6 @@ export class MyPicksMain extends React.Component {
     this.setDefaults();
   }
   onSubmit(values) {
-    console.log(values);
     this.props.dispatch(makePicks(values));
     this.props.history.push('/leaderboard');
   }
@@ -26,6 +25,7 @@ export class MyPicksMain extends React.Component {
     }
   }
   render() {
+    const lockoutTime = new Date("09 September 2018 10:00:00")
     const matchups = this.props.matchupData.map((matchup, index) => {
       return (
         <div className="matchup" key={index}>
@@ -59,11 +59,11 @@ export class MyPicksMain extends React.Component {
                 )}>
                 {matchupSelects}
                 <div className="button-div">
-                  <button type="submit">Submit Changes</button>
+                  {Date.now() > lockoutTime ? null : <button type="submit">Submit Changes</button>}
                 </div>
               </form>
               <div className="button-div">
-                <button className="stop-editing-button" onClick={() => this.resetPicks()}>Reset Changes</button>
+                {Date.now() > lockoutTime ? null : <button className="stop-editing-button" onClick={() => this.resetPicks()}>Reset Changes</button>}
               </div>
             </section>
             <div className="matchups col-9">

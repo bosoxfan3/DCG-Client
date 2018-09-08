@@ -27,9 +27,7 @@ export class LeaderboardPage extends React.Component {
     return (
       <div>
         <UserNav />
-        <LeaderboardMain />
-        <button hidden type="button" onClick={() => this.updateScores()}>Update Scores</button>
-        {/* the buttons are hidden so that only the administrator can update the scores */}
+        <LeaderboardMain updateScores={() => this.updateScores()} />
       </div>
     );
   }

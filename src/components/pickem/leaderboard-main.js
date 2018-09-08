@@ -24,7 +24,8 @@ export class LeaderboardMain extends React.Component {
         </div>
       </div>
     );
-    const rankings = this.props.allUsers.map((user, index) => {
+    const nonDemoUsers = this.props.allUsers.filter(user => user.name !== 'demo');
+    const rankings = nonDemoUsers.map((user, index) => {
       return (
         <div className="rankings" key={index}>
           <div className="rank col-1">
@@ -42,6 +43,7 @@ export class LeaderboardMain extends React.Component {
         </div>
       )
     });
+    const updateScoreButton = <button type="button" onClick={() => this.props.updateScores()}>Update Scores</button>;
     return (
       <div id="leaderboard-main">
         <div className="row">
@@ -49,6 +51,7 @@ export class LeaderboardMain extends React.Component {
             <h1>Leaderboard</h1>
             {titles}
             {rankings}
+            {this.props.currentUser.username === 'dqwest' ? <div>{updateScoreButton}</div> : null}
           </div>
         </div>
       </div>
@@ -57,7 +60,8 @@ export class LeaderboardMain extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  allUsers: state.users.allUsers
+  allUsers: state.users.allUsers,
+  currentUser: state.auth.currentUser
 });
 
 export default connect(mapStateToProps)(LeaderboardMain);
