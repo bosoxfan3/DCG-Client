@@ -8,7 +8,7 @@ export class PublicPicksMain extends React.Component {
         if (!picks.matchup0) {
             return '<p>No picks submitted</p>';
         }
-        if (picks.matchup0 !== 'Panthers' && picks.matchup0 !== 'Steelers') {
+        if (picks.matchup0 !== 'Packers' && picks.matchup0 !== 'Seahawks') {
             return '<p>No picks made this week</p>';
         }
         let result = '';
