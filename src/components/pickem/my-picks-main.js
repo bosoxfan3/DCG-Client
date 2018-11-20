@@ -27,7 +27,7 @@ export class MyPicksMain extends React.Component {
         }
     }
     render() {
-        const lockoutTime = new Date('18 November 2018 10:00:00');
+        const lockoutTime = new Date('25 November 2018 10:00:00');
         const matchups = this.props.matchupData.map((matchup, index) => {
             return (
                 <div className="matchup" key={index}>
@@ -53,7 +53,7 @@ export class MyPicksMain extends React.Component {
             <div id="my-picks-main">
                 <div className="row">
                     <div className="main-area col-12">
-                        <h1>Week 11</h1>
+                        <h1>Week 12</h1>
                         <section className="col-3">
                             <form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
                                 {matchupSelects}
